@@ -1,7 +1,11 @@
-footer.footer-section {
+footer {
     background: #222222;
+}
+
+footer .footer-section {
     padding: 6rem 0;
 }
+
 .footer-category h4 {
     margin: 0;
     font-size: 20px;
@@ -10,6 +14,7 @@ footer.footer-section {
     position: relative;
     display: inline;
 }
+
 .footer-category h4:after {
     content: '';
     position: absolute;
@@ -19,40 +24,112 @@ footer.footer-section {
     left: 0;
     bottom: -15px;
 }
+
 .footer-category ul li {
     list-style: none;
 }
-.footer-category ul{
+
+.footer-category ul {
     padding: 15px 0 0;
 }
+
 .footer-category ul li a {
     font-size: 14px;
     color: white;
     text-transform: capitalize;
     text-decoration: none;
 }
+
 .footer-content {
     display: flex;
     justify-content: space-between;
 }
+
 .footer-category ul li:not(:last-child) {
     padding-bottom: 18px;
 }
+
 .footer-category.contact-details-sec li a {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .footer-category.contact-details-sec li a svg {
     width: 20px;
     height: 20px;
 }
+
 .footer-category .social-icons svg {
     color: white;
 }
+
 .footer-category .social-icons {
     margin-top: 30px;
     display: flex;
     align-items: center;
     gap: 25px;
+}
+
+.footer-bottom-content p {
+    margin: 0;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    border-top: 1px solid #D8D8D8;
+}
+
+.footer-bottom-content p a {
+    color: #4EAF4E;
+    text-decoration: none;
+}
+
+.news-letter-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 0;
+}
+
+.news-letter-section .newsletter h3 {
+    margin: 0;
+    font-size: 36px;
+    color: #FFC400;
+    text-transform: uppercase;
+}
+
+.news-letter-section .btn-section {
+    width: 40%;
+    display: flex;
+    position: relative;
+}
+
+.news-letter-section .btn-section input[type="text"] {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 40px;
+    text-transform: capitalize;
+    width: 100%;
+}
+.news-letter-section button.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 40px;
+    border-radius: 40px;
+    background: #FFC400;
+    color: black;
+    border: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer-news {
+    border-bottom: 1px solid #D8D8D8;
 }

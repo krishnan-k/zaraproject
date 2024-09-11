@@ -2,6 +2,23 @@ import React from 'react';
 import '../component-css/grid.css'
 import Gridimage from '../component-images/Gridimage';
 const Gridsection = () => {
+    const gridContent = document.querySelector('.grid-inner-content');
+    if (gridContent) {
+        const gridInner = gridContent.querySelectorAll('.grid-body');
+        gridInner.forEach(item => {
+            item.addEventListener("mouseover", () => {
+                gridInner.forEach(section => {
+                    section.classList.remove('active');
+                });
+                item.classList.add('active');
+            });
+        });
+    }
+
+
+
+
+
     return (
         <div className='grid-section'>
             <div className='container'>
@@ -13,7 +30,7 @@ const Gridsection = () => {
                         <div className='grid-inner-content'>
                             {Gridimage.map((item) => (
                                 <div className='grid-body' key={item.id}>
-                                    <img src={item.image} alt='img'/>
+                                    <img src={item.image} alt='img' />
                                     <div className='title'>{item.title}</div>
                                     <div className='des'>{item.des}</div>
                                 </div>

@@ -5,8 +5,11 @@ import Gridsection from '../components/Gridsection'
 import Imagegrid from '../components/Imagegrid'
 import Numbercounter from '../components/Numbercounter'
 import Blog from '../components/Blog'
+import Testimonials from '../components/Testimonials'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+
+
 
 const Homepage = () => {
   return (
@@ -17,8 +20,9 @@ const Homepage = () => {
       <Imagegrid />
       <Numbercounter />
       <Blog />
-      <Contact/>
-      <Footer/>
+      <Testimonials />
+      <Contact />
+      <Footer />
     </div>
   )
 }

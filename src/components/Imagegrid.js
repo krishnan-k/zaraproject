@@ -2,6 +2,18 @@ import React from 'react'
 import '../component-css/imagegrid.css'
 import Gridbox from '../component-images/Gridbox'
 const Imagegrid = () => {
+    const gridBoxArea = document.querySelector('.image-box-content');
+    if (gridBoxArea) {
+        const gridInnerBox = gridBoxArea.querySelectorAll('.image-box');
+        gridInnerBox.forEach(item => {
+            item.addEventListener("mouseover", () => {
+                gridInnerBox.forEach(section => {
+                    section.classList.remove('active');
+                });
+                item.classList.add('active');
+            });
+        });
+    }
     return (
         <>
             <div className='image-grid-section'>

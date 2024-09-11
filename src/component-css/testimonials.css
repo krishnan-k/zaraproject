@@ -1,0 +1,115 @@
+.testimonial-section .inner_content_section h3 {
+    text-transform: uppercase;
+    background: linear-gradient(178deg, rgba(255, 233, 177, 1) 0%, rgba(221, 160, 3, 1) 100%);
+    font-size: 16px;
+    display: inline;
+    padding: 4px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-align: left;
+}
+
+.testimonial-section {
+    padding: 6rem 0;
+}
+
+.testimonial-section .inner_content_section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.testimonial-section .swiper .swiper-slide {
+    text-align: center;
+}
+
+.testimonial-section .swiper .swiper-slide .title {
+    font-size: 40px;
+    font-weight: bold;
+    max-width: 700px;
+    margin: auto;
+    padding: 10px 0 30px;
+    line-height: 1.4;
+}
+
+.testimonial-section .swiper .swiper-slide .author-name {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.testimonial-section .swiper .swiper-slide .desgination {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4EAF4E;
+    padding-top: 5px;
+}
+
+.testimonial-section .swiper .swiper-button-next:before,
+.testimonial-section .swiper .swiper-button-prev:before {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: black;
+}
+
+.testimonial-section .swiper .swiper-button-next:before {
+    content: 'next';
+}
+
+.testimonial-section .swiper .swiper-button-prev:before {
+    content: 'prev';
+}
+
+.testimonial-section .swiper .swiper-button-next {
+    right: 300px;
+    padding: 30px 0px 30px 20px;
+    width: 140px;
+    border-radius: 40px;
+    background: #F3F3F3;
+}
+
+.testimonial-section .swiper .swiper-button-prev {
+    left: 300px;
+    flex-direction: row-reverse;
+    padding: 30px 20px 30px 0;
+    width: 140px;
+    border-radius: 40px;
+    background: #F3F3F3;
+}
+
+.testimonial-section .swiper .swiper-button-prev:after {
+    background-image: url('../images/prev.png');
+    background-size: cover;
+    background-position: center;
+    font-size: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 0;
+    margin-right: 10px;
+    transition: all 0.3s linear;
+}
+
+.testimonial-section .swiper .swiper-button-next:after {
+    background-image: url('../images/next.png');
+    background-size: cover;
+    background-position: center;
+    font-size: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 0;
+    margin-left: 10px;
+    transition: all 0.3s linear;
+}
+.testimonial-section .swiper .swiper-button-prev:hover:after{
+    background-image: url('../images/prevhover.png');
+}
+.testimonial-section .swiper .swiper-button-next:hover:after{
+    background-image: url('../images/nexthover.png');
+}
+.testimonial-section .swiper .swiper-button-next.swiper-button-disabled::after {
+    transform: rotate(180deg);
+}
+.testimonial-section .swiper .swiper-button-prev.swiper-button-disabled::after {
+    transform: rotate(-180deg);
+}

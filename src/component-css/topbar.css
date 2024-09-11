@@ -36,3 +36,18 @@
     display: flex;
     gap: 15px;
 }
+
+
+@media screen and (max-width: 749px){
+    .tab_bar{
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 5px;
+        padding: 16px 10px;
+    }
+    .top_bar_section .left_content{
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
