@@ -37,7 +37,12 @@
     gap: 15px;
 }
 
-
+@media screen and (max-width: 1200px){
+    .tab_bar{
+        padding: 15px;
+    }
+}
+    
 @media screen and (max-width: 749px){
     .tab_bar{
         flex-wrap: wrap;

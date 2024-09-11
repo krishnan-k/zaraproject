@@ -54,6 +54,7 @@ const Contact = () => {
                                         className="name"
                                         type="text"
                                         placeholder="enter your name"
+                                        required
                                     />
                                 </div>
                                 <div className="email">
@@ -64,6 +65,7 @@ const Contact = () => {
                                         className="company details"
                                         type="text"
                                         placeholder="consult@mail.com"
+                                        required
                                     />
                                 </div>
                             </div>
@@ -76,6 +78,7 @@ const Contact = () => {
                                         className="phone_number"
                                         type="text"
                                         placeholder="+008 654 231"
+                                        required
                                     />
                                 </div>
                                 <div className="company">
