@@ -115,7 +115,7 @@ button.drawer-close {
     z-index: 1;
     transition: all 0.3s linear;
 }
-@media (max-width: 989px) {
+@media screen and  (max-width: 989px) {
     .nav-content {
         position: fixed;
         top: 0;
@@ -152,3 +152,10 @@ button.drawer-close {
         gap: 30px;
     }
 }
+
+@media screen and  (max-width: 576px) {
+    .navbar-section .container{
+        justify-content: center;
+    }
+}
+
