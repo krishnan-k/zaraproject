@@ -1,0 +1,29 @@
+.number-img {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.number-counter-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 60px;
+}
+
+.number-img .img-content {
+    text-align: left;
+}
+
+.number-counter-content .img-content .title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.number-counter-content .img-content .description {
+    color: #474747;
+}
+.number-counter-content .number-img:not(:last-child) {
+    border-right: 1px dashed #989898;
+    padding-right: 60px;
+}

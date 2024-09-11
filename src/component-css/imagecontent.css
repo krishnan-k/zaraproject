@@ -1,0 +1,107 @@
+.image-content-section .inner-content-sec .left-content>* {
+    margin: 0;
+}
+
+.image-content-section .inner-content-sec {
+    padding: 6rem 0;
+    display: flex;
+}
+
+.image-content-section .inner-content-sec .left-content {
+    text-align: left;
+}
+
+.image-content-section .inner-content-sec .left-content h3 {
+    text-transform: uppercase;
+    background: linear-gradient(178deg, rgba(255, 233, 177, 1) 0%, rgba(221, 160, 3, 1) 100%);
+    font-size: 16px;
+    display: inline;
+    padding: 4px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.image-content-section .inner-content-sec .left-content h2 {
+    font-size: 50px;
+    line-height: 1.2;
+    padding-top: 18px;
+}
+
+.image-content-section .inner-content-sec .left-content p.sub-content {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 30px;
+    max-width: 600px;
+}
+
+.image-content-section .inner-content-sec .left-content p.des {
+    font-size: 16px;
+    color: #474747;
+    max-width: 580px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.happy-customer .business-service {
+    display: flex;
+    align-items: center;
+}
+
+.happy-customer .business-service>*,
+.happy-customer p {
+    margin: 0;
+}
+
+.happy-customer .business-service h5 {
+    font-size: 30px;
+}
+
+.happy-customer .business-service svg {
+    width: 25px;
+    height: 25px;
+}
+
+.happy-customer .business-service span {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.image-content-section .inner-content-sec .left-content .socials {
+    display: inline-flex;
+    align-items: center;
+    border-top: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 20px 0;
+}
+
+.left-content .star-icon {
+    color: #FFCC4A;
+}
+
+.left-content .simile-icon {
+    color: #4EAF4E;
+}
+
+.left-content .happy-customer p {
+    font-weight: 500;
+}
+
+.left-content .happy-customer {
+    background: #F1F1F1;
+    padding: 15px;
+    border-radius: 15px;
+    margin-right: 40px;
+    position: relative;
+}
+
+.left-content .happy-customer:first-child:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    right: -20px;
+    top: 0;
+    height: 100%;
+    background: #D8D8D8;
+    display: block;
+}

@@ -1,0 +1,91 @@
+.blog-content-section .inner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.blog-content-section .inner-content h2,
+.blog-content-section .inner-content h4 {
+    margin: 0;
+}
+.blog-content-section {
+    background: #F1F1F1;
+    padding: 6rem 0;
+    margin-top: 80px;
+}
+.blog-content-section .inner-content h2 {
+    font-size: 45px;
+    text-align: left;
+    max-width: 600px;
+    margin-top: 15px;
+    color: black;
+}
+.blog-content-section .inner-content h4 {
+    text-transform: uppercase;
+    background: linear-gradient(178deg, rgba(255, 233, 177, 1) 0%, rgba(221, 160, 3, 1) 100%);
+    font-size: 16px;
+    display: inline;
+    padding: 4px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-align: left;
+}
+.blog-content-section .inner-content .left-content{
+    text-align: left;
+}
+.blog-content-section .inner-content .right-content button.service {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    border-radius: 40px;
+    background: #4EAF4E;
+    color: white;
+    border: none;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.blog-content-section .blog-sec {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 30px;
+    grid-gap: 30px;
+}
+.blog-content-section .blog-sec .blog-post .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+.blog-content-section .blog-post .image {
+    display: flex;
+}
+.blog-content-section .blog-post .blog-inner-content {
+    padding: 20px 0;
+}
+.blog-content-section .blog-post .blog-inner-content .title {
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+.blog-content-section .blog-post .blog-inner-content .des {
+    line-height: 28px;
+}
+.blog-content-section .blog-post .author .author-image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.blog-content-section .blog-post .author {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 15px 0;
+}
+.blog-content-section .blog-post .author_name {
+    padding-right: 2rem;
+    border-right: 1px solid #D8D8D8;
+}
+.blog-content-section .blog-post .blog-date {
+    padding-left: 2rem;
+}
