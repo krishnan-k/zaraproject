@@ -112,7 +112,7 @@ button.drawer-close {
     height: 100%;
     background: rgba(0,0,0,0.5);
     inset: 0;
-    z-index: 1;
+    z-index: 2;
     transition: all 0.3s linear;
 }
 @media screen and  (max-width: 989px) {
@@ -128,7 +128,7 @@ button.drawer-close {
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 2;
+        z-index: 3;
     }
 
     .nav-content.open {
