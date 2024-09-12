@@ -122,7 +122,11 @@
         flex-direction: column;
         row-gap: 20px;
     }
-
+    .image-content-section .inner-content-sec .left-content .socials{
+        flex-wrap: wrap;
+        row-gap: 20px;
+        justify-content: center;
+    }
     .image-content-section .inner-content-sec .left-content p.sub-content {
         font-size: 16px;
         padding-top: 10px;

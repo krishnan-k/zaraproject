@@ -36,7 +36,13 @@
     display: flex;
     gap: 15px;
 }
-
+.top_bar_section .right_content svg{
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.top_bar_section .right_content svg:hover{
+    color: #4EAF4E;
+}
 @media screen and (max-width: 1200px){
     .tab_bar{
         padding: 15px;

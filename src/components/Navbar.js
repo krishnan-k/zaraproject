@@ -38,7 +38,7 @@ const Navbar = () => {
                         <span className='contact-icon'>
                             <IoCallOutline />
                         </span>
-                        <span className='phone_number'>+ (888) 452 1505</span>
+                        <span className='phone_number'><Link to='tel:+ (888) 452 1505'>+ (888) 452 1505</Link></span>
                     </button>
                 </div>
             </div>

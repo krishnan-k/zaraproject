@@ -48,7 +48,7 @@ const Imagegrid = () => {
                             <h2>Our client, global analytical techno company, wanted to build market.</h2>
                         </div>
                         <div className='right-content'>
-                            <button type='button' className='service'>more gallery</button>
+                            <button type='button' className='service shine-effect'>more gallery</button>
                         </div>
                     </div>
 

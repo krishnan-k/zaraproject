@@ -30,7 +30,25 @@ const Blogcontent = [
         authorImage: author,
         name: "John Carter",
         date: "September 1, 2022"
-    }
+    },
+    {
+        id: 22,
+        image: b1,
+        title: "Consulting Fees Study 2019+",
+        des: "Varius quam quisque id diam vel quam elementum. Nunc sed blandit libero volutpat sed cras ornare. Purus ut faucibus pulvinar elementum integer enim neque.",
+        authorImage: author,
+        name: "John Carter",
+        date: "September 1, 2022"
+    },
+    {
+        id: 23,
+        image: b1,
+        title: "Consulting Fees Study 2019+",
+        des: "Varius quam quisque id diam vel quam elementum. Nunc sed blandit libero volutpat sed cras ornare. Purus ut faucibus pulvinar elementum integer enim neque.",
+        authorImage: author,
+        name: "John Carter",
+        date: "September 1, 2022"
+    },
 ]
 
 

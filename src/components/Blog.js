@@ -1,7 +1,18 @@
 import React from 'react'
 import '../component-css/blog.css'
 import Blogcontent from '../component-images/Blogcontent'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { SwiperSlide, Swiper } from 'swiper/react';
 const Blog = () => {
+  const autoplay = {
+    delay: 3000,
+    disableOnInteraction: false,
+  };
+  const pagination = {
+    clickable: true,
+  }
   return (
     <div className='blog-content-section'>
       <div className='container'>
@@ -12,31 +23,51 @@ const Blog = () => {
             </h2>
           </div>
           <div className='right-content'>
-            <button type='button' className='service'>more news</button>
+            <button type='button' className='service shine-effect'>more news</button>
           </div>
         </div>
 
         <div className='blog-sec'>
-          {Blogcontent.map((item) => (
-            <div key={item.id} className='blog-post'>
-              <div className='image'>
-                <img src={item.image} alt='' />
-              </div>
-              <div className='blog-inner-content'>
-                <div className='title'>{item.title}</div>
-                <div className='des'>{item.des}</div>
-              </div>
-              <div className='author'>
-                <div className='author-image'>
-                  <img src={item.authorImage} alt='author'/>
-                  <div className='author_name'>{item.name}</div>
+          <Swiper spaceBetween={30}
+            slidesPerView={3}
+            pagination={pagination}
+            autoplay={autoplay}
+            navigation={true}
+            modules={[Navigation, Autoplay, Pagination]}
+            grabCursor={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1200: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {Blogcontent.map((item) => (
+              <SwiperSlide key={item.id} className='blog-post'>
+                <div className='image shine-effect'>
+                  <img src={item.image} alt='' />
                 </div>
-                <div className='blog-date'>
-                  {item.date}
+                <div className='blog-inner-content'>
+                  <div className='title'>{item.title}</div>
+                  <div className='des'>{item.des}</div>
                 </div>
-              </div>
-            </div>
-          ))}
+                <div className='author'>
+                  <div className='author-image'>
+                    <img src={item.authorImage} alt='author' />
+                    <div className='author_name'>{item.name}</div>
+                  </div>
+                  <div className='blog-date'>
+                    {item.date}
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>
