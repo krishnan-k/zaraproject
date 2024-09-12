@@ -131,4 +131,7 @@
         font-size: 16px;
         padding-top: 10px;
     }
+    .left-content .happy-customer:first-child:before{
+        display: none;
+    }
 }
