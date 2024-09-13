@@ -181,7 +181,13 @@ footer .footer-section {
     justify-content: center;
   }
 }
+.footer-category .title svg {
+  display: none;
+}
 @media screen and (max-width: 480px) {
+  .footer-category .title svg {
+    display: block;
+  }
   .footer-content {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
