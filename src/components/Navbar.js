@@ -13,14 +13,14 @@ const Navbar = () => {
         <div className={`navbar-section ${drawerOpen ? 'active' : ''}`}>
             <div className='container'>
                 <div className='logo'>
-                   <Link to="/"> <img src={logo} alt='logo' /></Link>
+                    <Link to="/"> <img src={logo} alt='logo' /></Link>
                 </div>
                 <button className='drawer-toggle' onClick={toggleDrawer}>
                     <BiMenu />
                 </button>
                 <div className={`nav-content ${drawerOpen ? 'open' : ''}`}>
                     <button className='drawer-close' onClick={toggleDrawer}>
-                    <IoClose />
+                        <IoClose />
                     </button>
                     <nav>
                         <ul>
@@ -32,6 +32,14 @@ const Navbar = () => {
                             <li><Link to='/contact'>contact</Link></li>
                         </ul>
                     </nav>
+                    <div className='contact_number'>
+                        <button type='button' className='enquery_btn'>
+                            <span className='contact-icon'>
+                                <IoCallOutline />
+                            </span>
+                            <span className='phone_number'><Link to='tel:+ (888) 452 1505'>+ (888) 452 1505</Link></span>
+                        </button>
+                    </div>
                 </div>
                 <div className='contact_number'>
                     <button type='button' className='enquery_btn'>

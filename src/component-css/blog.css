@@ -267,6 +267,10 @@
 
 @media screen and (max-width: 989px) {
 
+    .blog-content-section .swiper-horizontal>.swiper-pagination-bullets{
+        bottom: 15px;
+    }
+
     .blog-content-section .inner-content .left-content,
     .blog-content-section .inner-content h2 {
         text-align: center;

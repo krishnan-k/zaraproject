@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../component-css/footer.css'
 import { IoMailOutline } from 'react-icons/io5';
 import { MdCall } from 'react-icons/md';
@@ -7,6 +7,10 @@ import footerLogo from '../images/footerlogo.png'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 const Footer = () => {
+    const [linkOpen, setLinkOpen] = useState(false);
+    const toggleLink = () =>{
+        setLinkOpen(!linkOpen);
+    }
     return (
         <footer>
             <div className='footer-news'>
@@ -23,7 +27,7 @@ const Footer = () => {
             <div className='footer-section'>
                 <div className="container pt-5 pb-5">
                     <div className="footer-content">
-                        <div className="footer-category">
+                        <div className="footer-category" onClick={toggleLink}>
                             <img src={footerLogo} alt='footer-logo' />
                             <div className='social-icons'>
                                 <FaInstagram />
@@ -33,8 +37,8 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="footer-category">
-                            <h4 className="title">Product</h4>
-                            <ul>
+                            <h4 className="title" onClick={toggleLink}>Product</h4>
+                            <ul className={`${linkOpen ? 'active' : ''}`}>
                                 <li><a className="link" href="">Landing Page</a></li>
                                 <li><a className="link" href="">Popup Builder</a></li>
                                 <li><a className="link" href="">Web-design</a></li>
@@ -43,8 +47,8 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="footer-category">
-                            <h4 className="title">Use Cases</h4>
-                            <ul>
+                            <h4 className="title" onClick={toggleLink}>Use Cases</h4>
+                            <ul className={`${linkOpen ? 'active' : ''}`}>
                                 <li><a className="link" href="">Web-designers</a></li>
                                 <li><a className="link" href="">Marketers</a></li>
                                 <li><a className="link" href="">Small Business</a></li>
@@ -52,8 +56,8 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="footer-category">
-                            <h4 className="title">Company</h4>
-                            <ul>
+                            <h4 className="title" onClick={toggleLink}>Company</h4>
+                            <ul className={`${linkOpen ? 'active' : ''}`}>
                                 <li><a className="link" href="">About Us</a></li>
                                 <li><a className="link" href="">Careers</a></li>
                                 <li><a className="link" href="">FAQ’s</a></li>
@@ -63,7 +67,7 @@ const Footer = () => {
                         </div>
                         <div className="footer-category contact-details-sec">
                             <h4 className="title">Contact Us</h4>
-                            <ul>
+                            <ul className={`${linkOpen ? 'active' : ''}`}>
                                 <li><a className="link" href=""> <CiLocationOn /> Wisconsin Ave, Suite 700<br></br>
                                     Chevy Chase, Maryland 20815</a></li>
                                 <li><a className="link" href=""><IoMailOutline /> alma.lawson@example.com</a></li>
