@@ -90,7 +90,7 @@ footer .footer-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 35px 0;
+    padding: 35px 1.8rem;
 }
 
 .news-letter-section .newsletter h3 {
