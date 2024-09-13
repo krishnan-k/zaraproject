@@ -1,16 +1,21 @@
-import React, { useState } from 'react'
-import '../component-css/footer.css'
+import React, { useState } from 'react';
+import '../component-css/footer.css';
 import { IoMailOutline } from 'react-icons/io5';
 import { MdCall } from 'react-icons/md';
 import { CiLocationOn } from 'react-icons/ci';
-import footerLogo from '../images/footerlogo.png'
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import footerLogo from '../images/footerlogo.png';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaPlus } from 'react-icons/fa6';
+import { FiMinus } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+
 const Footer = () => {
-    const [linkOpen, setLinkOpen] = useState(false);
-    const toggleLink = () =>{
-        setLinkOpen(!linkOpen);
-    }
+    const [openCategory, setOpenCategory] = useState(null);
+
+    const toggleCategory = (category) => {
+        setOpenCategory(openCategory === category ? null : category);
+    };
+
     return (
         <footer>
             <div className='footer-news'>
@@ -19,7 +24,7 @@ const Footer = () => {
                         <h3>subscribe</h3>
                     </div>
                     <div className='btn-section'>
-                        <input type='text' placeholder='enter your email addreess' />
+                        <input type='text' placeholder='enter your email address' />
                         <button type='submit' className='submit-btn shine-effect'>subscribe</button>
                     </div>
                 </div>
@@ -27,7 +32,7 @@ const Footer = () => {
             <div className='footer-section'>
                 <div className="container pt-5 pb-5">
                     <div className="footer-content">
-                        <div className="footer-category" onClick={toggleLink}>
+                        <div className="footer-category" onClick={() => toggleCategory('brand')}>
                             <img src={footerLogo} alt='footer-logo' />
                             <div className='social-icons'>
                                 <FaInstagram />
@@ -37,8 +42,11 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="footer-category">
-                            <h4 className="title" onClick={toggleLink}>Product</h4>
-                            <ul className={`${linkOpen ? 'active' : ''}`}>
+                            <h4 className="title" onClick={() => toggleCategory('product')}>
+                                Product
+                                {openCategory === 'product' ? <FiMinus className='minus-icon' /> : <FaPlus />}
+                            </h4>
+                            <ul className={`${openCategory === 'product' ? 'active' : ''}`}>
                                 <li><a className="link" href="">Landing Page</a></li>
                                 <li><a className="link" href="">Popup Builder</a></li>
                                 <li><a className="link" href="">Web-design</a></li>
@@ -47,8 +55,11 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="footer-category">
-                            <h4 className="title" onClick={toggleLink}>Use Cases</h4>
-                            <ul className={`${linkOpen ? 'active' : ''}`}>
+                            <h4 className="title" onClick={() => toggleCategory('use-cases')}>
+                                Use Cases
+                                {openCategory === 'use-cases' ? <FiMinus className='minus-icon' /> : <FaPlus />}
+                            </h4>
+                            <ul className={`${openCategory === 'use-cases' ? 'active' : ''}`}>
                                 <li><a className="link" href="">Web-designers</a></li>
                                 <li><a className="link" href="">Marketers</a></li>
                                 <li><a className="link" href="">Small Business</a></li>
@@ -56,8 +67,11 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="footer-category">
-                            <h4 className="title" onClick={toggleLink}>Company</h4>
-                            <ul className={`${linkOpen ? 'active' : ''}`}>
+                            <h4 className="title" onClick={() => toggleCategory('company')}>
+                                Company
+                                {openCategory === 'company' ? <FiMinus className='minus-icon' /> : <FaPlus />}
+                            </h4>
+                            <ul className={`${openCategory === 'company' ? 'active' : ''}`}>
                                 <li><a className="link" href="">About Us</a></li>
                                 <li><a className="link" href="">Careers</a></li>
                                 <li><a className="link" href="">FAQ’s</a></li>
@@ -67,9 +81,10 @@ const Footer = () => {
                         </div>
                         <div className="footer-category contact-details-sec">
                             <h4 className="title">Contact Us</h4>
-                            <ul className={`${linkOpen ? 'active' : ''}`}>
-                                <li><a className="link" href=""> <CiLocationOn /> Wisconsin Ave, Suite 700<br></br>
-                                    Chevy Chase, Maryland 20815</a></li>
+                            <ul>
+                                <li><a className="link" href="">
+                                    <CiLocationOn /> Wisconsin Ave, Suite 700<br /> Chevy Chase, Maryland 20815
+                                </a></li>
                                 <li><a className="link" href=""><IoMailOutline /> alma.lawson@example.com</a></li>
                                 <li><a className="link" href=""><MdCall /> +1 800 854-36-80</a></li>
                             </ul>
@@ -84,6 +99,6 @@ const Footer = () => {
             </div>
         </footer>
     );
-}
+};
 
-export default Footer
+export default Footer;
