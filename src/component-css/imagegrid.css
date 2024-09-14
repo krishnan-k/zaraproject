@@ -244,6 +244,10 @@ button.gallery-btn {
 .gallery-popup.active .gallery-popup-section {
     display: block;
 }
+.image-box.active button.gallery-btn {
+    opacity: 1;
+    visibility: visible;
+}
 @media screen and (max-width: 989px) {
 
     .image-grid-section .left-content,

@@ -1,21 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../component-css/imagegrid.css'
 import Gridbox from '../component-images/Gridbox'
 import { FaPlus } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
 const Imagegrid = () => {
-    const gridBoxArea = document.querySelector('.image-box-content');
-    if (gridBoxArea) {
-        const gridInnerBox = gridBoxArea.querySelectorAll('.image-box');
-        gridInnerBox.forEach(item => {
-            item.addEventListener("mouseover", () => {
-                gridInnerBox.forEach(section => {
-                    section.classList.remove('active');
-                });
-                item.classList.add('active');
-            });
-        });
-    }
     const galleryPopup = (index) => {
         const gallerySection = document.getElementById(`gallery_popup_${index}`);
         const overlay = document.getElementById('overlay');
@@ -37,6 +25,11 @@ const Imagegrid = () => {
                 }
             }
         }
+    }
+
+    const [activeState, setActiveState] = useState(0);
+    const handleMouseOver = (index) =>{
+        setActiveState(index);
     }
     return (
         <>
@@ -73,7 +66,7 @@ const Imagegrid = () => {
             <div className='img-box'>
                 <div className='image-box-content'>
                     {Gridbox.map((item, index) => (
-                        <div key={item.id} className='image-box'>
+                        <div key={item.id} className={`image-box ${activeState === index ? 'active' : ''}`} onMouseOver={()=> handleMouseOver(index)}>
                             <div className='img-section'>
                                 <button id={`gallery_apply_btn_${index}`} className='gallery-btn' type="button" onClick={() => galleryPopup(index)}><FaPlus /></button>
                                 <img src={item.image} alt={item.alt} />
