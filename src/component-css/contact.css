@@ -229,6 +229,7 @@ span.mandatory {
 
     .right-content form .data-1, .right-content form .data-2 {
         gap: 10px;
+        width: 100%;
     }
 
     .right-content form .data-1, .right-content form .data-2 {

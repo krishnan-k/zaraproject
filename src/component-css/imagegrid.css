@@ -213,7 +213,7 @@ button.gallery-btn {
 }
 .overlay {
     position: fixed;
-    background: rgb(0 0 0 / 85%);
+    background: rgb(0 0 0 / 95%);
     inset: 0;
     z-index: 2;
     display: none;
