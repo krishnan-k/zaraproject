@@ -1,190 +1,214 @@
 footer {
-    background: #222222;
+  background: #222222;
 }
 
 footer .footer-section {
-    padding: 6rem 1.8rem;
+  padding: 6rem 1.8rem;
 }
 
 .footer-category h4 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    position: relative;
-    display: inline;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  display: inline;
 }
 
 .footer-category h4:after {
-    content: '';
-    position: absolute;
-    width: 65%;
-    height: 2px;
-    background: #FFC400;
-    left: 0;
-    bottom: -15px;
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 2px;
+  background: #ffc400;
+  left: 0;
+  bottom: -15px;
 }
 
 .footer-category ul li {
-    list-style: none;
+  list-style: none;
 }
 
 .footer-category ul {
-    padding: 15px 0 0;
+  padding: 15px 0 0;
 }
 
 .footer-category ul li a {
-    font-size: 14px;
-    color: white;
-    text-transform: capitalize;
-    text-decoration: none;
+  font-size: 14px;
+  color: white;
+  text-transform: capitalize;
+  text-decoration: none;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-category ul li:not(:last-child) {
-    padding-bottom: 18px;
+  padding-bottom: 18px;
 }
 
 .footer-category.contact-details-sec li a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .footer-category.contact-details-sec li a svg {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .footer-category .social-icons svg {
-    color: white;
+  color: white;
 }
 
 .footer-category .social-icons {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    gap: 25px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 .footer-bottom-content p {
-    margin: 0;
-    text-align: center;
-    padding: 20px 0;
-    color: white;
-    font-size: 16px;
-    font-weight: 400;
-    border-top: 1px solid #D8D8D8;
+  margin: 0;
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  border-top: 1px solid #d8d8d8;
 }
 
 .footer-bottom-content p a {
-    color: #4EAF4E;
-    text-decoration: none;
+  color: #4eaf4e;
+  text-decoration: none;
 }
 
 .news-letter-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 1.8rem;
 }
 
 .news-letter-section .newsletter h3 {
-    margin: 0;
-    font-size: 36px;
-    color: #FFC400;
-    text-transform: uppercase;
+  margin: 0;
+  font-size: 36px;
+  color: #ffc400;
+  text-transform: uppercase;
 }
 
 .news-letter-section .btn-section {
-    width: 40%;
-    display: flex;
-    position: relative;
+  width: 40%;
+  display: flex;
+  position: relative;
 }
 
 .news-letter-section .btn-section input[type="text"] {
-    border: none;
-    padding: 15px 20px;
-    border-radius: 40px;
-    text-transform: capitalize;
-    width: 100%;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 40px;
+  text-transform: capitalize;
+  width: 100%;
 }
 
 .news-letter-section button.submit-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 7px 40px;
-    border-radius: 40px;
-    background: #FFC400;
-    color: black;
-    border: none;
-    text-transform: capitalize;
-    font-size: 16px;
-    font-weight: 600;
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 40px;
+  border-radius: 40px;
+  background: #ffc400;
+  color: black;
+  border: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 600;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .footer-news {
-    border-bottom: 1px solid #D8D8D8;
+  border-bottom: 1px solid #d8d8d8;
 }
 
-
 @media screen and (max-width: 1200px) {
-    .news-letter-section {
-        padding: 35px 20px;
-    }
+  .news-letter-section {
+    padding: 35px 20px;
+  }
 
+  footer .footer-section {
+    padding: 3rem 1.8rem;
+  }
 
-    footer .footer-section {
-        padding: 3rem 1.8rem;
-    }
-
-    .news-letter-section button.submit-btn {
-        position: relative;
-        right: unset;
-        top: unset;
-        transform: unset;
-    }
+  .news-letter-section button.submit-btn {
+    position: relative;
+    right: unset;
+    top: unset;
+    transform: unset;
+  }
 }
 
 @media screen and (max-width: 989px) {
-    .footer-content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 30px 0;
-    }
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px 0;
+  }
 
-    .news-letter-section {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
+  .news-letter-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
 
-    .news-letter-section .btn-section {
-        width: 100%;
-        gap: 10px;
-    }
+  .news-letter-section .btn-section {
+    width: 100%;
+    gap: 10px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .footer-content {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px 0;
-    }
-    .news-letter-section .btn-section {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .news-letter-section .btn-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.footer-category .title svg {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .footer-category .title svg {
+    display: block;
+  }
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px 0;
+  }
+  .footer-category h4.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-category svg {
+    cursor: pointer;
+  }
+  .footer-category:not(:last-child) ul {
+    display: none;
+  }
+  .footer-category h4:after {
+    width: 15%;
+    bottom: -5px;
+  }
+  .footer-category:not(:last-child) ul.active {
+    display: block;
+  }
 }

@@ -264,7 +264,14 @@
         padding: 3rem 1.8rem;
     }
 }
-
+@media screen and (min-width: 1341px) and (max-width: 1540px) {
+    .blog-content-section .swiper .swiper-button-next{
+        right: 450px;
+    }
+    .blog-content-section .swiper .swiper-button-prev{
+        left: 450px;
+    }
+}
 @media screen and (max-width: 989px) {
 
     .blog-content-section .swiper-horizontal>.swiper-pagination-bullets{
