@@ -296,4 +296,7 @@
     .blog-content-section .blog-sec {
         grid-template-columns: repeat(1, 1fr);
     }
+    .blog-sec .swiper {
+        padding-bottom: 95px;
+    }
 }
