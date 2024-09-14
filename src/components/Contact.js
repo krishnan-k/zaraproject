@@ -122,7 +122,7 @@ const Contact = () => {
                                         </label>
                                         <input
                                             className="phone_number"
-                                            type="text"
+                                            type="number"
                                             placeholder="+008 654 231"
                                             name='phone'
                                             value={formData.phone}
