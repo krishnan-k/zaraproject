@@ -3,6 +3,7 @@ import '../component-css/contact.css'
 import { CiClock2, CiLocationOn } from 'react-icons/ci'
 import { IoCallOutline } from 'react-icons/io5'
 import { MdEmail } from 'react-icons/md'
+import { Fade } from 'react-awesome-reveal'
 const Contact = () => {
     const [formData, setFormData] = useState({
         fullName: '',
@@ -64,7 +65,11 @@ const Contact = () => {
                 <div className='contact-content'>
                     <div className='left-content'>
                         <h4>process</h4>
-                        <h2>Contact Us. It’s Easy.</h2>
+                        <div className='animation-class'>
+                            <Fade direction='up'>
+                                <h2>Contact Us. It’s Easy.</h2>
+                            </Fade>
+                        </div>
                         <p>Leverage agile frameworks to provide a robust synopsis for high level overviews.
                             Iterative approaches to corporate strategy foster collaborative.</p>
 

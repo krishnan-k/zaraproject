@@ -28,6 +28,7 @@
 .inner-content h2 {
   font-size: clamp(1.375rem, 0.9013rem + 2.1656vw, 3.5rem);
   line-height: 1.2;
+  margin: 0;
 }
 .image_banner_section .inner-content p {
   padding-top: 16px;

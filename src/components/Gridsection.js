@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../component-css/grid.css'
 import Gridimage from '../component-images/Gridimage';
+import { Fade } from 'react-awesome-reveal';
 const Gridsection = () => {
     const [activeState, setActiveState] = useState(0);
     const handleMouseOver = (index) => {
@@ -11,7 +12,11 @@ const Gridsection = () => {
             <div className='container'>
                 <div className='inner_content_section'>
                     <h3>service</h3>
-                    <h2>Get Control Over Your Business I take your finance to next level</h2>
+                    <div className='animation-class'>
+                        <Fade direction='up'>
+                            <h2>Get Control Over Your Business I take your finance to next level</h2>
+                        </Fade>
+                    </div>
 
                     <div className='grid-container'>
                         <div className='grid-inner-content'>

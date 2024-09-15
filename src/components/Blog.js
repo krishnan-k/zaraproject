@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { SwiperSlide, Swiper } from 'swiper/react';
+import { Fade } from 'react-awesome-reveal';
 const Blog = () => {
   const autoplay = {
     delay: 3000,
@@ -19,8 +20,12 @@ const Blog = () => {
         <div className='inner-content'>
           <div className='left-content'>
             <h4>blog</h4>
-            <h2>Take a look at our latest articles & resources
-            </h2>
+            <div className='animation-class'>
+              <Fade direction='up'>
+                <h2>Take a look at our latest articles & resources
+                </h2>
+              </Fade>
+            </div>
           </div>
           <div className='right-content'>
             <button type='button' className='service shine-effect'>more news</button>

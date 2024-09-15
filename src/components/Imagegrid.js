@@ -3,6 +3,7 @@ import '../component-css/imagegrid.css'
 import Gridbox from '../component-images/Gridbox'
 import { FaPlus } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
+import { Fade } from 'react-awesome-reveal';
 const Imagegrid = () => {
     const galleryPopup = (index) => {
         const gallerySection = document.getElementById(`gallery_popup_${index}`);
@@ -28,7 +29,7 @@ const Imagegrid = () => {
     }
 
     const [activeState, setActiveState] = useState(0);
-    const handleMouseOver = (index) =>{
+    const handleMouseOver = (index) => {
         setActiveState(index);
     }
     return (
@@ -38,7 +39,11 @@ const Imagegrid = () => {
                     <div className='inner-content'>
                         <div className='left-content'>
                             <h3>process</h3>
-                            <h2>Our client, global analytical techno company, wanted to build market.</h2>
+                            <div className='animation-class'>
+                                <Fade direction='up'>
+                                    <h2>Our client, global analytical techno company, wanted to build market.</h2>
+                                </Fade>
+                            </div>
                         </div>
                         <div className='right-content'>
                             <button type='button' className='service shine-effect'>more gallery</button>
@@ -66,7 +71,7 @@ const Imagegrid = () => {
             <div className='img-box'>
                 <div className='image-box-content'>
                     {Gridbox.map((item, index) => (
-                        <div key={item.id} className={`image-box ${activeState === index ? 'active' : ''}`} onMouseOver={()=> handleMouseOver(index)}>
+                        <div key={item.id} className={`image-box ${activeState === index ? 'active' : ''}`} onMouseOver={() => handleMouseOver(index)}>
                             <div className='img-section'>
                                 <button id={`gallery_apply_btn_${index}`} className='gallery-btn' type="button" onClick={() => galleryPopup(index)}><FaPlus /></button>
                                 <img src={item.image} alt={item.alt} />
