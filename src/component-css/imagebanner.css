@@ -42,7 +42,8 @@
   padding: 18px 30px;
   cursor: pointer;
   border-radius: 30px;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 16px;
 }
 .inner-content .buttons button.service {
   background: #4eaf4e;

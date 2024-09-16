@@ -3,7 +3,7 @@ import '../component-css/grid.css'
 import Gridimage from '../component-images/Gridimage';
 import { Fade } from 'react-awesome-reveal';
 const Gridsection = () => {
-    const [activeState, setActiveState] = useState(0);
+    const [activeState, setActiveState] = useState(1);
     const handleMouseOver = (index) => {
         setActiveState(index)
     }
