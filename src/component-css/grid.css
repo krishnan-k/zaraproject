@@ -86,7 +86,7 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 990px) {
     .grid-inner-content .grid-body:last-child:nth-child(3n - 2) {
         grid-column-end: 5;
     }
@@ -100,7 +100,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 989px) {
     .grid-inner-content {
         grid-template-columns: repeat(4, 1fr);
     }
