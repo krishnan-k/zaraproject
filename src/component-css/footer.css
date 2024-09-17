@@ -38,8 +38,11 @@ footer .footer-section {
   color: white;
   text-transform: capitalize;
   text-decoration: none;
+  transition: all 0.3s linear;
 }
-
+.footer-category ul li a:hover{
+  color: #4eaf4e;
+}
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -62,8 +65,12 @@ footer .footer-section {
 
 .footer-category .social-icons svg {
   color: white;
+  cursor: pointer;
+  transition: all 0.3s linear;
 }
-
+.footer-category .social-icons svg:hover{
+  color: #4eaf4e;
+}
 .footer-category .social-icons {
   margin-top: 30px;
   display: flex;
