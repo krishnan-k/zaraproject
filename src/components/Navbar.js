@@ -9,6 +9,18 @@ const Navbar = () => {
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
     };
+    const [activeState, setActiveState] = useState(null)
+    const handleMouseOver = (index) => {
+        setActiveState(index)
+    }
+    const menuItems = [
+        { path: '/', label: 'home' },
+        { path: '/pages', label: 'pages' },
+        { path: '/services', label: 'services' },
+        { path: '/work', label: 'work' },
+        { path: '/page', label: 'page' },
+        { path: '/contact', label: 'contact' }
+    ];
     return (
         <div className={`navbar-section ${drawerOpen ? 'active' : ''}`}>
             <div className='container'>
@@ -24,12 +36,11 @@ const Navbar = () => {
                     </button>
                     <nav>
                         <ul>
-                            <li className='active'><Link to='/'>home</Link></li>
-                            <li><Link to='/pages'>pages</Link></li>
-                            <li><Link to='/services'>services</Link></li>
-                            <li><Link to='/'>work</Link> </li>
-                            <li><Link to='/'>page</Link></li>
-                            <li><Link to='/contact'>contact</Link></li>
+                            {menuItems.map((item, index) => (
+                                <li key={index} className={`${activeState === index ? 'active' : ''}`} onClick={() => handleMouseOver(index)}>
+                                    <Link to={item.path}>{item.label}</Link>
+                                </li>
+                            ))}
                         </ul>
                     </nav>
                     <div className='contact_number'>

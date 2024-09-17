@@ -1,13 +1,15 @@
 .image_banner_section {
-  background-image: url("../images/Photo.png");
+  /* background-image: url("../images/Photo.png");
   min-height: 700px;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   position: relative;
 }
-.inner-content > * {
+
+.inner-content>* {
   margin: 0;
 }
+
 .image_banner_section .inner-content .buttons {
   display: flex;
   align-items: center;
@@ -16,8 +18,26 @@
 
 }
 
+.video-section {
+  display: flex;
+}
+
+.video-section video {
+  width: 100%;
+  height: 100%;
+  max-height: 800px;
+  object-fit: cover;
+}
+
+.video-section:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #00000046;
+}
+
 .image_banner_section .inner-content {
-  max-width: 600px;
+  max-width: 650px;
   text-align: left;
   top: 50%;
   transform: translateY(-50%);
@@ -26,16 +46,19 @@
   padding: 30px;
   border-radius: 30px;
 }
+
 .inner-content h2 {
   font-size: clamp(1.375rem, 0.9013rem + 2.1656vw, 3.5rem);
   line-height: 1.2;
   margin: 0;
 }
+
 .image_banner_section .inner-content p {
   padding-top: 16px;
   max-width: 500px;
   padding-bottom: 40px;
 }
+
 .inner-content .buttons button {
   background: white;
   border: none;
@@ -46,11 +69,13 @@
   font-weight: 400;
   font-size: 16px;
 }
+
 .inner-content .buttons button.service {
   background: #4eaf4e;
   color: white;
   margin-right: 0;
 }
+
 .book_appoinment span.calender {
   width: 38px;
   height: 38px;
@@ -58,47 +83,56 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 233, 177, 1) 0%,
-    rgba(221, 160, 3, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 233, 177, 1) 0%,
+      rgba(221, 160, 3, 1) 100%);
 }
+
 .inner-content .buttons button.book_date {
-  padding: 9px 20px 9px 10px;
+  padding: 11px 20px 11px 10px;
 }
+
 span.book_appoinment {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .book_appoinment span.calender svg {
   color: #000;
   width: 20px;
   height: 20px;
 }
+
 .image_banner_section .inner-content.buttons {
   display: flex;
   align-items: center;
 }
+
 @media screen and (min-width: 1200px) and (max-width: 1540px) {
   .image_banner_section .container {
     padding-left: 1.8rem;
     padding-right: 1.8rem;
   }
 }
+
 @media screen and (max-width: 1199px) {
-  .image_banner_section {
+
+  .image_banner_section,
+  .video-section video {
     min-height: 480px;
   }
+
   .image_banner_section .inner-content {
     margin: 0 20px;
   }
 }
+
 @media screen and (max-width: 767px) {
   .inner-content .buttons button {
     padding: 12px 30px;
   }
+
   .image_banner_section .inner-content {
     text-align: center;
     left: 50%;
@@ -107,21 +141,26 @@ span.book_appoinment {
     margin: 0;
     padding: 15px;
   }
+
   .image_banner_section .inner-content p {
     margin: auto;
     padding-bottom: 20px;
   }
+
   .image_banner_section .inner-content .buttons {
     justify-content: center;
   }
+
   .inner-content .buttons button.book_date {
     padding: 8px 20px 8px 10px;
   }
+
   .book_appoinment span.calender {
     width: 28px;
     height: 28px;
   }
-  .book_appoinment span.calender svg{
+
+  .book_appoinment span.calender svg {
     width: 16px;
     height: 16px;
   }
