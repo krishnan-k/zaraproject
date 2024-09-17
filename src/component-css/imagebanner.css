@@ -12,7 +12,8 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  row-gap: 10px;
+  gap: 13px;
+
 }
 
 .image_banner_section .inner-content {
@@ -46,7 +47,7 @@
 .inner-content .buttons button.service {
   background: #4eaf4e;
   color: white;
-  margin-right: 13px;
+  margin-right: 0;
 }
 .book_appoinment span.calender {
   width: 38px;
@@ -86,14 +87,36 @@ span.book_appoinment {
 }
 @media screen and (max-width: 1199px) {
   .image_banner_section {
-    min-height: 550px;
+    min-height: 480px;
   }
   .image_banner_section .inner-content {
     margin: 0 20px;
   }
 }
 @media screen and (max-width: 767px) {
+  .inner-content .buttons button {
+    padding: 12px 30px;
+  }
   .image_banner_section .inner-content {
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    margin: 0;
     padding: 15px;
+  }
+  .image_banner_section .inner-content p {
+    margin: auto;
+    padding-bottom: 20px;
+  }
+  .image_banner_section .inner-content .buttons {
+    justify-content: center;
+  }
+  .inner-content .buttons button.book_date {
+    padding: 8px 20px 8px 10px;
+  }
+  .book_appoinment span.calender {
+    width: 28px;
+    height: 28px;
   }
 }

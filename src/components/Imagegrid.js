@@ -54,6 +54,22 @@ const Imagegrid = () => {
 
 
                 </div>
+                <div className='img-box'>
+                    <div className='image-box-content'>
+                        {Gridbox.map((item, index) => (
+                            <div key={item.id} className='image-box'>
+                                <div className='img-section'>
+                                    <button id={`gallery_apply_btn_${index}`} className='gallery-btn' type="button" onClick={() => galleryPopup(index)}><FaPlus /></button>
+                                    <img src={item.image} alt={item.alt} />
+                                </div>
+                                <div className='inner-content'>
+                                    <div className='title'>{item.title}</div>
+                                    <div className='des'>{item.des}</div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
             <div id="overlay" className="overlay"></div>
             {Gridbox.map((item, index) => (
@@ -70,22 +86,7 @@ const Imagegrid = () => {
                     </div>
                 </div>
             ))}
-            <div className='img-box'>
-                <div className='image-box-content'>
-                    {Gridbox.map((item, index) => (
-                        <div key={item.id} className='image-box'>
-                            <div className='img-section'>
-                                <button id={`gallery_apply_btn_${index}`} className='gallery-btn' type="button" onClick={() => galleryPopup(index)}><FaPlus /></button>
-                                <img src={item.image} alt={item.alt} />
-                            </div>
-                            <div className='inner-content'>
-                                <div className='title'>{item.title}</div>
-                                <div className='des'>{item.des}</div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+
         </>
     )
 }
