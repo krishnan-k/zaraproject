@@ -206,7 +206,7 @@ button.gallery-btn {
   visibility: visible;
 }
 
-.gallery-popup .gallery-popup-section {
+.gallery-popup{
   display: none;
 }
 
@@ -216,7 +216,6 @@ button.gallery-btn {
   transform: translate(-50%, -50%);
   width: 100%;
   top: 50%;
-  display: flex;
   align-items: center;
   padding: 40px;
   justify-content: center;
@@ -224,11 +223,12 @@ button.gallery-btn {
 }
 .gallery-popup.active {
   height: 100%;
+  display: flex;
 }
 
 .overlay {
   position: fixed;
-  background: rgb(0 0 0 / 85%);
+  background: rgb(0 0 0 / 95%);
   inset: 0;
   z-index: 2;
   display: none;
