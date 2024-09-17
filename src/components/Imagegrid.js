@@ -52,10 +52,10 @@ const Imagegrid = () => {
 
 
                 </div>
-                <div className='img-box'>
+                <div className='img-box' >
                     <div className='image-box-content'>
                         {Gridbox.map((item, index) => (
-                            <div key={item.id} className='image-box'>
+                            <div key={item.id} className={`image-box ${activeState === index ? 'active' : ''}`} onMouseOver={() => handleMouseOver(index)}>
                                 <div className='img-section'>
                                     <button id={`gallery_apply_btn_${index}`} className='gallery-btn' type="button" onClick={() => galleryPopup(index)}><FaPlus /></button>
                                     <img src={item.image} alt={item.alt} />

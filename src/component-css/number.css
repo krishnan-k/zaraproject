@@ -1,57 +1,62 @@
 .number-img {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .number-counter-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 60px 20px 0;
-    row-gap: 30px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 20px 0;
+  row-gap: 30px;
+  flex-wrap: wrap;
 }
 
 .number-img .img-content {
-    text-align: left;
+  text-align: left;
 }
 
 .number-counter-content .img-content .title {
-    font-size: clamp(1.375rem, 0.9849rem + 1.7834vw, 3.125rem);
-    font-weight: bold;
+  font-size: clamp(1.375rem, 0.9849rem + 1.7834vw, 3.125rem);
+  font-weight: bold;
 }
 
 .number-counter-content .img-content .description {
-    color: #474747;
+  color: #474747;
 }
 
 .number-counter-content .number-img:not(:last-child) {
-    border-right: 1px dashed #989898;
-    padding-right: 60px;
+  border-right: 1px dashed #989898;
+  padding-right: 60px;
 }
 
 @media screen and (max-width: 989px) {
-    .number-counter-content .number-img:not(:last-child) {
-        padding-right: 40px;
-    }
+  .number-counter-content .number-img:not(:last-child) {
+    padding-right: 40px;
+  }
 
-    .number-counter-content {
-        padding: 30px 20px 0;
-    }
+  .number-counter-content {
+    padding: 30px 20px 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .number-counter-content .number-img:not(:last-child) {
-        border: none;
-    }
+  .number-counter-content .number-img:not(:last-child) {
+    border: none;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .number-counter-content {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 50px 50px 0;
-    }
+  .number-counter-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 50px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .number-counter-content {
+    padding: 50px 50px 0;
+  }
 }

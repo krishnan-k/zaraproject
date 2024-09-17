@@ -146,7 +146,7 @@
 
   .image-content-section .inner-content-sec .left-content p.sub-content {
     font-size: 16px;
-    padding-top: 10px;
+    padding-top: 0;
   }
 
   .left-content .happy-customer:first-child:before {
@@ -157,6 +157,10 @@
   }
   .left-content .happy-customer:not(:last-child) {
     margin-right: 20px;
+  }
+  .image-content-section .inner-content-sec .left-content h2{
+    padding-top: 0;
+    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 480px) {

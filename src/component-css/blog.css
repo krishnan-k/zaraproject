@@ -277,7 +277,9 @@
     .blog-content-section .swiper-horizontal>.swiper-pagination-bullets{
         bottom: 15px;
     }
-
+    .blog-content-section{
+        margin-top: 50px;
+    }
     .blog-content-section .inner-content .left-content,
     .blog-content-section .inner-content h2 {
         text-align: center;
@@ -289,6 +291,10 @@
 
     .blog-content-section .blog-sec {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .blog-content-section .inner-content .right-content button.service{
+        padding: 10px 40px;
+        font-size: 16px;
     }
 }
 
