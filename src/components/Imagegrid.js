@@ -1,21 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../component-css/imagegrid.css'
 import Gridbox from '../component-images/Gridbox'
 import { FaPlus } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
+import { Fade } from 'react-awesome-reveal';
 const Imagegrid = () => {
-    const gridBoxArea = document.querySelector('.image-box-content');
-    if (gridBoxArea) {
-        const gridInnerBox = gridBoxArea.querySelectorAll('.image-box');
-        gridInnerBox.forEach(item => {
-            item.addEventListener("mouseover", () => {
-                gridInnerBox.forEach(section => {
-                    section.classList.remove('active');
-                });
-                item.classList.add('active');
-            });
-        });
-    }
     const galleryPopup = (index) => {
         const gallerySection = document.getElementById(`gallery_popup_${index}`);
         const overlay = document.getElementById('overlay');
@@ -38,6 +27,11 @@ const Imagegrid = () => {
             }
         }
     }
+
+    const [activeState, setActiveState] = useState(0);
+    const handleMouseOver = (index) => {
+        setActiveState(index);
+    }
     return (
         <>
             <div className='image-grid-section'>
@@ -45,7 +39,11 @@ const Imagegrid = () => {
                     <div className='inner-content'>
                         <div className='left-content'>
                             <h3>process</h3>
-                            <h2>Our client, global analytical techno company, wanted to build market.</h2>
+                            <div className='animation-class'>
+                                <Fade direction='up'>
+                                    <h2>Our client, global analytical techno company, wanted to build market.</h2>
+                                </Fade>
+                            </div>
                         </div>
                         <div className='right-content'>
                             <button type='button' className='service shine-effect'>more gallery</button>
@@ -86,7 +84,6 @@ const Imagegrid = () => {
                     </div>
                 </div>
             ))}
-
         </>
     )
 }

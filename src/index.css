@@ -43,6 +43,9 @@ body {
   z-index: 1;
   left: -70%;
 }
+.animation-class {
+  overflow: hidden;
+}
 @keyframes shine {
   100% {
     left: 125%;
