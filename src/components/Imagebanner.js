@@ -11,111 +11,113 @@ const Imagebanner = () => {
     const pagination = {
         clickable: true,
     }
-    const autoplay = {
-        delay: 4000,
-        disableOnInteraction: false,
-    };
+    // const autoplay = {
+    //     delay: 4000,
+    //     disableOnInteraction: false,
+    // };
     return (
-        <div className='image-section'>
-            <Swiper spaceBetween={10} navigation={true} pagination={pagination}
-                modules={[Navigation, Autoplay, Pagination]}
-                autoplay={autoplay}
-                grabCursor={true}>
-                <SwiperSlide>
-                    <div className='image_banner_section'>
-                        <div className='container'>
+        <section id="home">
+            <div className='image-section'>
+                <Swiper spaceBetween={10} navigation={true} pagination={pagination}
+                    modules={[Navigation, Autoplay, Pagination]}
+                    // autoplay={autoplay}
+                    grabCursor={true}>
+                    <SwiperSlide>
+                        <div className='image_banner_section'>
+                            <div className='container'>
 
-                            <div className='inner-content'>
-                                <div className='animation-class'>
-                                    <Fade direction='up'>
-                                        <h2>
-                                            Your small business
-                                            growth advisors
-                                        </h2>
-                                    </Fade>
-                                </div>
-                                <p>
-                                    Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.
-                                </p>
-                                <div className='buttons'>
-                                    <button type='button' className='service shine-effect'>our service</button>
-                                    <button type='button' className='book_date shine-effect'>
-                                        <span className='book_appoinment'>
-                                            <span className='calender'>
-                                                <PiNotepadLight /></span>
-                                            book a meeting
-                                        </span>
-                                    </button>
+                                <div className='inner-content'>
+                                    <div className='animation-class'>
+                                        <Fade direction='up'>
+                                            <h2>
+                                                Your small business
+                                                growth advisors
+                                            </h2>
+                                        </Fade>
+                                    </div>
+                                    <p>
+                                        Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.
+                                    </p>
+                                    <div className='buttons'>
+                                        <button type='button' className='service shine-effect'>our service</button>
+                                        <button type='button' className='book_date shine-effect'>
+                                            <span className='book_appoinment'>
+                                                <span className='calender'>
+                                                    <PiNotepadLight /></span>
+                                                book a meeting
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='image_banner_section'>
-                        <div className='video-section'>
-                            <video src={businessVideo} autoPlay muted loop false />
-                        </div>
-                        <div className='container'>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='image_banner_section'>
+                            <div className='video-section'>
+                                <video src={businessVideo} autoPlay muted loop false />
+                            </div>
+                            <div className='container'>
 
-                            <div className='inner-content'>
-                                <div className='animation-class'>
-                                    <Fade direction='up'>
-                                        <h2>
-                                            Your small business
-                                            growth advisors
-                                        </h2>
-                                    </Fade>
-                                </div>
-                                <p>
-                                    Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.
-                                </p>
-                                <div className='buttons'>
-                                    <button type='button' className='service shine-effect'>our service</button>
-                                    <button type='button' className='book_date shine-effect'>
-                                        <span className='book_appoinment'>
-                                            <span className='calender'>
-                                                <PiNotepadLight /></span>
-                                            book a meeting
-                                        </span>
-                                    </button>
+                                <div className='inner-content'>
+                                    <div className='animation-class'>
+                                        <Fade direction='up'>
+                                            <h2>
+                                                Your small business
+                                                growth advisors
+                                            </h2>
+                                        </Fade>
+                                    </div>
+                                    <p>
+                                        Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.
+                                    </p>
+                                    <div className='buttons'>
+                                        <button type='button' className='service shine-effect'>our service</button>
+                                        <button type='button' className='book_date shine-effect'>
+                                            <span className='book_appoinment'>
+                                                <span className='calender'>
+                                                    <PiNotepadLight /></span>
+                                                book a meeting
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='image_banner_section'>
-                        <div className='container'>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='image_banner_section'>
+                            <div className='container'>
 
-                            <div className='inner-content'>
-                                <div className='animation-class'>
-                                    <Fade direction='up'>
-                                        <h2>
-                                            Your small business
-                                            growth advisors
-                                        </h2>
-                                    </Fade>
-                                </div>
-                                <p>
-                                    Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.
-                                </p>
-                                <div className='buttons'>
-                                    <button type='button' className='service shine-effect'>our service</button>
-                                    <button type='button' className='book_date shine-effect'>
-                                        <span className='book_appoinment'>
-                                            <span className='calender'>
-                                                <PiNotepadLight /></span>
-                                            book a meeting
-                                        </span>
-                                    </button>
+                                <div className='inner-content'>
+                                    <div className='animation-class'>
+                                        <Fade direction='up'>
+                                            <h2>
+                                                Your small business
+                                                growth advisors
+                                            </h2>
+                                        </Fade>
+                                    </div>
+                                    <p>
+                                        Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.
+                                    </p>
+                                    <div className='buttons'>
+                                        <button type='button' className='service shine-effect'>our service</button>
+                                        <button type='button' className='book_date shine-effect'>
+                                            <span className='book_appoinment'>
+                                                <span className='calender'>
+                                                    <PiNotepadLight /></span>
+                                                book a meeting
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-            </Swiper>
-        </div>
+                    </SwiperSlide>
+                </Swiper>
+            </div>
+        </section>
     )
 }
 

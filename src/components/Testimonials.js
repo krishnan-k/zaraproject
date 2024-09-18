@@ -7,26 +7,28 @@ import Carouselimg from '../component-images/Carouselimg';
 import '../component-css/testimonials.css'
 const Testimonials = () => {
     return (
-        <div className='testimonial-section'>
-            <div className='container'>
-                <div className='inner_content_section'>
-                    <h3>client feedback</h3>
-                </div>
-                <Swiper spaceBetween={10} navigation={true} modules={[Navigation]} grabCursor={true}>
-                    {Carouselimg.map((item) => (
+        <section id="testimonial">
+            <div className='testimonial-section'>
+                <div className='container'>
+                    <div className='inner_content_section'>
+                        <h3>client feedback</h3>
+                    </div>
+                    <Swiper spaceBetween={10} navigation={true} modules={[Navigation]} grabCursor={true}>
+                        {Carouselimg.map((item) => (
                             <SwiperSlide key={item.id}>
                                 <div className='title'>{item.title}</div>
-                                <img src={item.image} alt='img' />
+                                <img src={item.image} alt='testimonial-image' className='testimonial-image'/>
                                 <div className='author-name'>
                                     {item.authorName}
                                 </div>
                                 <div className='desgination'>{item.desginatin}</div>
                             </SwiperSlide>
-                    ))}
+                        ))}
 
-                </Swiper>
+                    </Swiper>
+                </div>
             </div>
-        </div>
+        </section>
     );
 }
 

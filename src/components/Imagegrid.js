@@ -33,7 +33,7 @@ const Imagegrid = () => {
         setActiveState(index);
     }
     return (
-        <>
+        <section id="process">
             <div className='image-grid-section'>
                 <div className='container'>
                     <div className='inner-content'>
@@ -58,7 +58,7 @@ const Imagegrid = () => {
                             <div key={item.id} className={`image-box ${activeState === index ? 'active' : ''}`} onMouseOver={() => handleMouseOver(index)}>
                                 <div className='img-section'>
                                     <button id={`gallery_apply_btn_${index}`} className='gallery-btn' type="button" onClick={() => galleryPopup(index)}><FaPlus /></button>
-                                    <img src={item.image} alt={item.alt} />
+                                    <img src={item.image} alt='grid-box-image' />
                                 </div>
                                 <div className='inner-content'>
                                     <div className='title'>{item.title}</div>
@@ -77,14 +77,14 @@ const Imagegrid = () => {
                             <IoClose />
                         </button>
                         <div className='left-content'>
-                            <img src={item.image} alt={item.alt} />
+                            <img src={item.image} alt='grid-box-image' />
                             <div className='title'><h2>{item.title}</h2></div>
                             <div className='des'><h4>{item.des}</h4></div>
                         </div>
                     </div>
                 </div>
             ))}
-        </>
+        </section>
     )
 }
 

@@ -4,9 +4,18 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: 1;
 }
 
-.inner-content > * {
+.image_banner_section:after {
+  position: absolute;
+  content: '';
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.inner-content>* {
   margin: 0;
 }
 
@@ -19,6 +28,7 @@
 
 .video-section {
   display: flex;
+  max-height: 800px;
 }
 
 .video-section video {
@@ -32,7 +42,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: #00000046;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .image_banner_section .inner-content {
@@ -82,11 +92,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 233, 177, 1) 0%,
-    rgba(221, 160, 3, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 233, 177, 1) 0%,
+      rgba(221, 160, 3, 1) 100%);
 }
 
 .inner-content .buttons button.book_date {
@@ -109,32 +117,22 @@ span.book_appoinment {
   display: flex;
   align-items: center;
 }
-.image-section
-  .swiper
-  .swiper-slide:nth-child(even)
-  .image_banner_section
-  .inner-content {
+
+.image-section .swiper .swiper-slide:nth-child(even) .image_banner_section .inner-content {
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.image-section
-  .swiper
-  .swiper-slide:nth-child(even)
-  .image_banner_section
-  .inner-content
-  p {
+
+.image-section .swiper .swiper-slide:nth-child(even) .image_banner_section .inner-content p {
   margin: auto;
 }
-.image-section
-  .swiper
-  .swiper-slide:nth-child(even)
-  .image_banner_section
-  .inner-content
-  .buttons {
+
+.image-section .swiper .swiper-slide:nth-child(even) .image_banner_section .inner-content .buttons {
   justify-content: center;
 }
+
 .image-section .swiper .swiper-button-next:before,
 .image-section .swiper .swiper-button-prev:before {
   font-size: 18px;
@@ -151,22 +149,7 @@ span.book_appoinment {
   content: "prev";
 }
 
-.image-section .swiper .swiper-button-next {
-  right: 300px;
-  padding: 30px 0px 30px 20px;
-  width: 140px;
-  border-radius: 40px;
-  background: #f3f3f3;
-}
 
-.image-section .swiper .swiper-button-prev {
-  left: 300px;
-  flex-direction: row-reverse;
-  padding: 30px 20px 30px 0;
-  width: 140px;
-  border-radius: 40px;
-  background: #f3f3f3;
-}
 
 .image-section .swiper .swiper-button-prev:after {
   background-image: url("../images/prev.png");
@@ -213,35 +196,54 @@ span.book_appoinment {
 }
 
 .image-section .swiper .swiper-button-prev {
-  left: 500px;
+  left: 0;
   flex-direction: row-reverse;
-  padding: 30px 20px 30px 0;
+  padding: 30px 25px 30px 0;
   width: 140px;
   border-radius: 40px;
   background: #dfdfdf;
-  top: auto;
-  bottom: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
 }
 
 .image-section .swiper .swiper-button-next {
-  right: 500px;
-  padding: 30px 0px 30px 20px;
+  right: 0;
+  padding: 30px 0px 30px 25px;
   width: 140px;
   border-radius: 40px;
   background: #dfdfdf;
-  top: auto;
-  bottom: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+.image-section .swiper .swiper-button-next.swiper-button-disabled,
+.image-section .swiper .swiper-button-prev.swiper-button-disabled {
+  opacity: 0.35 !important;
+}
+.image-section .swiper:hover .swiper-button-next {
+  opacity: 1;
+  visibility: visible;
+  right: 30px;
 }
 
-.image-section .swiper-horizontal > .swiper-pagination-bullets {
-  bottom: 25px;
+.image-section .swiper:hover .swiper-button-prev {
+  opacity: 1;
+  visibility: visible;
+  left: 30px;
+}
+
+.image-section .swiper-horizontal>.swiper-pagination-bullets {
+  bottom: 45px;
   z-index: 1;
 }
 
-.image-section
-  .swiper
-  .swiper-pagination-clickable
-  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.image-section .swiper .swiper-pagination-clickable .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #4eaf4e;
   border: 1px solid transparent;
 }
@@ -254,7 +256,12 @@ span.book_appoinment {
   border: 1px solid #ffffff;
   transition: all 0.3s linear;
 }
+
 @media screen and (max-width: 1340px) {
+  .image-section .swiper-horizontal>.swiper-pagination-bullets {
+    bottom: 30px;
+  }
+
   .image-section .swiper .swiper-button-next {
     right: 15px;
     top: auto;
@@ -288,6 +295,17 @@ span.book_appoinment {
     padding: 0;
   }
 }
+
+/* @media screen and (min-width: 1341px) and (max-width: 1540px) {
+  .image-section .swiper .swiper-button-next {
+    right: 450px;
+  }
+
+  .image-section .swiper .swiper-button-prev {
+    left: 450px;
+  }
+} */
+
 @media screen and (min-width: 1200px) and (max-width: 1540px) {
   .image_banner_section .container {
     padding-left: 1.8rem;
@@ -296,9 +314,14 @@ span.book_appoinment {
 }
 
 @media screen and (max-width: 1199px) {
+
   .image_banner_section,
   .video-section video {
-    min-height: 600px;
+    min-height: 550px;
+  }
+
+  .video-section {
+    max-height: 550px;
   }
 
   .image_banner_section .inner-content {
@@ -307,10 +330,16 @@ span.book_appoinment {
 }
 
 @media screen and (max-width: 767px) {
+
   .image_banner_section,
   .video-section video {
-    min-height: 450px;
+    min-height: 500px;
   }
+
+  .video-section {
+    max-height: 500px;
+  }
+
   .inner-content .buttons button {
     padding: 12px 30px;
   }
@@ -347,6 +376,7 @@ span.book_appoinment {
     height: 16px;
   }
 }
+
 @media screen and (max-width: 480px) {
   .image-section .swiper .swiper-button-next {
     right: 15px;
@@ -355,11 +385,17 @@ span.book_appoinment {
     width: 35px;
     height: 35px;
   }
+
+  .image-section .swiper-horizontal>.swiper-pagination-bullets {
+    bottom: 20px;
+  }
+
   .image-section .swiper .swiper-button-next:after,
   .image-section .swiper .swiper-button-prev:after {
     width: 29px;
     height: 29px;
   }
+
   .image-section .swiper .swiper-button-prev {
     left: 15px;
     top: auto;

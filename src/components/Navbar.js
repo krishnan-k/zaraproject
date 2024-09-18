@@ -13,14 +13,14 @@ const Navbar = () => {
     const handleMouseOver = (index) => {
         setActiveState(index)
     }
-    const menuItems = [
-        { path: '/', label: 'home' },
-        { path: '/pages', label: 'pages' },
-        { path: '/services', label: 'services' },
-        { path: '/work', label: 'work' },
-        { path: '/page', label: 'page' },
-        { path: '/contact', label: 'contact' }
-    ];
+    // const menuItems = [
+    //     { path: '/', label: 'home' },
+    //     { path: 'aboutus', label: 'about us' },
+    //     { path: 'services', label: 'services' },
+    //     { path: 'process', label: 'process' },
+    //     { path: 'feedback', label: 'feedback' },
+    //     { path: 'contact', label: 'contact' }
+    // ];
     return (
         <div className={`navbar-section ${drawerOpen ? 'active' : ''}`}>
             <div className='container'>
@@ -36,11 +36,12 @@ const Navbar = () => {
                     </button>
                     <nav>
                         <ul>
-                            {menuItems.map((item, index) => (
-                                <li key={index} className={`${activeState === index ? 'active' : ''}`} onClick={() => handleMouseOver(index)}>
-                                    <Link to={item.path}>{item.label}</Link>
-                                </li>
-                            ))}
+                            <li className='active'><Link to='/'>home</Link></li>
+                            <li><Link spy={true} smooth={true} duration={500}  to="aboutus">aboutus</Link></li>
+                            <li><Link to='ss'>services</Link></li>
+                            <li><Link to='aboutus'>work</Link> </li>
+                            <li><Link to='aboutus'>page</Link></li>
+                            <li><Link to='aboutus'>contact</Link></li>
                         </ul>
                     </nav>
                     <div className='contact_number'>

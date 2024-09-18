@@ -13,7 +13,7 @@ import Footer from '../components/Footer'
 
 const Homepage = () => {
   return (
-    <div>
+    <>
       <Imagebanner />
       <Imagecontent />
       <Gridsection />
@@ -23,7 +23,7 @@ const Homepage = () => {
       <Testimonials />
       <Contact />
       <Footer />
-    </div>
+    </>
   )
 }
 
