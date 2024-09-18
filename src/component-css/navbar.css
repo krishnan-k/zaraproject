@@ -215,7 +215,7 @@ button.drawer-close {
 }
 @media screen and (max-width: 767px) {
   .navbar-section .logo img {
-    max-width: 120px;
+    max-width: 100px;
   }
   .nav-content nav ul li a{
     font-size: 14px;

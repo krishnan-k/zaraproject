@@ -1,12 +1,12 @@
 .image_banner_section {
   background-image: url("../images/Photo.png");
-  min-height: 700px;
+  min-height: 800px;
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
-.inner-content>* {
+.inner-content > * {
   margin: 0;
 }
 
@@ -15,7 +15,6 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 13px;
-
 }
 
 .video-section {
@@ -25,16 +24,16 @@
 .video-section video {
   width: 100%;
   height: 100%;
-  max-height: 800px;
+  min-height: 800px;
   object-fit: cover;
 }
 
-/* .video-section:after {
-  content: '';
+.video-section:after {
+  content: "";
   position: absolute;
   inset: 0;
   background: #00000046;
-} */
+}
 
 .image_banner_section .inner-content {
   max-width: 650px;
@@ -83,9 +82,11 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(90deg,
-      rgba(255, 233, 177, 1) 0%,
-      rgba(221, 160, 3, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 233, 177, 1) 0%,
+    rgba(221, 160, 3, 1) 100%
+  );
 }
 
 .inner-content .buttons button.book_date {
@@ -108,7 +109,185 @@ span.book_appoinment {
   display: flex;
   align-items: center;
 }
+.image-section
+  .swiper
+  .swiper-slide:nth-child(even)
+  .image_banner_section
+  .inner-content {
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.image-section
+  .swiper
+  .swiper-slide:nth-child(even)
+  .image_banner_section
+  .inner-content
+  p {
+  margin: auto;
+}
+.image-section
+  .swiper
+  .swiper-slide:nth-child(even)
+  .image_banner_section
+  .inner-content
+  .buttons {
+  justify-content: center;
+}
+.image-section .swiper .swiper-button-next:before,
+.image-section .swiper .swiper-button-prev:before {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: black;
+}
 
+.image-section .swiper .swiper-button-next:before {
+  content: "next";
+}
+
+.image-section .swiper .swiper-button-prev:before {
+  content: "prev";
+}
+
+.image-section .swiper .swiper-button-next {
+  right: 300px;
+  padding: 30px 0px 30px 20px;
+  width: 140px;
+  border-radius: 40px;
+  background: #f3f3f3;
+}
+
+.image-section .swiper .swiper-button-prev {
+  left: 300px;
+  flex-direction: row-reverse;
+  padding: 30px 20px 30px 0;
+  width: 140px;
+  border-radius: 40px;
+  background: #f3f3f3;
+}
+
+.image-section .swiper .swiper-button-prev:after {
+  background-image: url("../images/prev.png");
+  background-size: cover;
+  background-position: center;
+  font-size: 0;
+  width: 45px;
+  height: 45px;
+  font-size: 0;
+  margin-right: 10px;
+  transition: all 0.3s linear;
+}
+
+.image-section .swiper .swiper-button-next:after {
+  background-image: url("../images/next.png");
+  background-size: cover;
+  background-position: center;
+  font-size: 0;
+  width: 45px;
+  height: 45px;
+  font-size: 0;
+  margin-left: 10px;
+  transition: all 0.3s linear;
+}
+
+.image-section .swiper .swiper-button-prev:hover:after {
+  background-image: url("../images/prevhover.png");
+}
+
+.image-section .swiper .swiper-button-next:hover:after {
+  background-image: url("../images/nexthover.png");
+}
+
+.image-section .swiper .swiper-button-next.swiper-button-disabled::after {
+  transform: rotate(180deg);
+}
+
+.image-section .swiper .swiper-button-prev.swiper-button-disabled::after {
+  transform: rotate(-180deg);
+}
+
+.blog-sec .swiper {
+  padding-bottom: 130px;
+}
+
+.image-section .swiper .swiper-button-prev {
+  left: 500px;
+  flex-direction: row-reverse;
+  padding: 30px 20px 30px 0;
+  width: 140px;
+  border-radius: 40px;
+  background: #dfdfdf;
+  top: auto;
+  bottom: 10px;
+}
+
+.image-section .swiper .swiper-button-next {
+  right: 500px;
+  padding: 30px 0px 30px 20px;
+  width: 140px;
+  border-radius: 40px;
+  background: #dfdfdf;
+  top: auto;
+  bottom: 10px;
+}
+
+.image-section .swiper-horizontal > .swiper-pagination-bullets {
+  bottom: 25px;
+  z-index: 1;
+}
+
+.image-section
+  .swiper
+  .swiper-pagination-clickable
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #4eaf4e;
+  border: 1px solid transparent;
+}
+
+.image-section .swiper .swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  transition: all 0.3s linear;
+}
+@media screen and (max-width: 1340px) {
+  .image-section .swiper .swiper-button-next {
+    right: 15px;
+    top: auto;
+    bottom: 15px;
+  }
+
+  .image-section .swiper .swiper-button-prev {
+    left: 15px;
+    top: auto;
+    bottom: 15px;
+  }
+
+  .image-section .swiper .swiper-button-prev::before,
+  .image-section .swiper .swiper-button-next::before {
+    display: none;
+  }
+
+  .image-section .swiper .swiper-button-next,
+  .image-section .swiper .swiper-button-prev {
+    padding: 0;
+    width: 55px;
+    height: 55px;
+  }
+
+  .image-section .swiper .swiper-button-prev:after,
+  .image-section .swiper .swiper-button-next:after {
+    margin: 0;
+  }
+
+  .image-section {
+    padding: 0;
+  }
+}
 @media screen and (min-width: 1200px) and (max-width: 1540px) {
   .image_banner_section .container {
     padding-left: 1.8rem;
@@ -117,10 +296,9 @@ span.book_appoinment {
 }
 
 @media screen and (max-width: 1199px) {
-
   .image_banner_section,
   .video-section video {
-    min-height: 480px;
+    min-height: 600px;
   }
 
   .image_banner_section .inner-content {
@@ -129,6 +307,10 @@ span.book_appoinment {
 }
 
 @media screen and (max-width: 767px) {
+  .image_banner_section,
+  .video-section video {
+    min-height: 450px;
+  }
   .inner-content .buttons button {
     padding: 12px 30px;
   }
@@ -163,5 +345,26 @@ span.book_appoinment {
   .book_appoinment span.calender svg {
     width: 16px;
     height: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .image-section .swiper .swiper-button-next {
+    right: 15px;
+    top: auto;
+    bottom: 15px;
+    width: 35px;
+    height: 35px;
+  }
+  .image-section .swiper .swiper-button-next:after,
+  .image-section .swiper .swiper-button-prev:after {
+    width: 29px;
+    height: 29px;
+  }
+  .image-section .swiper .swiper-button-prev {
+    left: 15px;
+    top: auto;
+    bottom: 15px;
+    width: 35px;
+    height: 35px;
   }
 }
