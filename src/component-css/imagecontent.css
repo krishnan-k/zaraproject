@@ -163,6 +163,9 @@
     padding-top: 0;
     margin: 10px 0;
   }
+  .image-content-section .inner-content-sec .left-content p.des{
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 480px) {
   .left-content .happy-customer {

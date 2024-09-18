@@ -43,6 +43,9 @@
 .top_bar_section .right_content svg:hover{
     color: #4EAF4E;
 }
+.top_bar_section .right_content a {
+    color: white;
+}
 @media screen and (max-width: 1200px){
     .tab_bar{
         padding: 15px;

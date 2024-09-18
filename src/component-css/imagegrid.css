@@ -307,6 +307,12 @@ button.gallery-btn::after {
   .image-box-content {
     width: 95%;
   }
+  .image-grid-section .container>.inner-content{
+    justify-content: center;
+  }
+  .image-grid-section .left-content, .image-grid-section .inner-content .left-content h2{
+    text-align: center;
+  }
   .image-box-content .image-box .img-section+.inner-content{
     left: 15px;
     bottom: 15px;

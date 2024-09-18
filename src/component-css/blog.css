@@ -305,4 +305,7 @@
     .blog-sec .swiper {
         padding-bottom: 95px;
     }
+    .blog-content-section .blog-post .blog-inner-content .des{
+        font-size: 14px;
+    }
 }

@@ -5,7 +5,7 @@ import { MdCall } from 'react-icons/md';
 import { CiLocationOn } from 'react-icons/ci';
 import footerLogo from '../images/footerlogo.png';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { FaPlus } from 'react-icons/fa6';
+import { FaPlus, FaXTwitter } from 'react-icons/fa6';
 import { FiMinus } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +15,10 @@ const Footer = () => {
     const toggleCategory = (category) => {
         setOpenCategory(openCategory === category ? null : category);
     };
-
+    const facebook = "https://facebook.com/"
+    const instagram = "https://www.instagram.com/"
+    const twitter = "https://x.com/"
+    const linkedin = "https://www.linkedin.com/"
     return (
         <footer>
             <div className='footer-news'>
@@ -35,10 +38,18 @@ const Footer = () => {
                         <div className="footer-category" onClick={() => toggleCategory('brand')}>
                             <img src={footerLogo} alt='footer-logo' />
                             <div className='social-icons'>
-                                <FaInstagram />
-                                <FaFacebook />
-                                <FaTwitter />
-                                <FaLinkedin />
+                                <Link to={instagram} target='blank'>
+                                    <FaInstagram />
+                                </Link>
+                                <Link to={facebook} target='blank'>
+                                    <FaFacebook />
+                                </Link>
+                                <Link to={twitter} target='blank'>
+                                    <FaXTwitter />
+                                </Link>
+                                <Link to={linkedin} target='blank'>
+                                    <FaLinkedin />
+                                </Link>
                             </div>
                         </div>
                         <div className="footer-category">
@@ -85,8 +96,8 @@ const Footer = () => {
                                 <li><a className="link" href="">
                                     <CiLocationOn /> Wisconsin Ave, Suite 700<br /> Chevy Chase, Maryland 20815
                                 </a></li>
-                                <li><a className="link" href=""><IoMailOutline /> alma.lawson@example.com</a></li>
-                                <li><a className="link" href=""><MdCall /> +1 800 854-36-80</a></li>
+                                <li><Link to='mailto:alma.lawson@example.com'><IoMailOutline />alma.lawson@example.com</Link></li>
+                                <li><Link to='tel: +1 800 854-36-80' className="link"><MdCall /> +1 800 854-36-80</Link></li>
                             </ul>
                         </div>
                     </div>

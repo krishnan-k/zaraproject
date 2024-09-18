@@ -9,7 +9,7 @@ const Navbar = () => {
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
     };
-    const [activeState, setActiveState] = useState(null)
+    const [activeState, setActiveState] = useState(0)
     const handleMouseOver = (index) => {
         setActiveState(index)
     }

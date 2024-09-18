@@ -4,6 +4,7 @@ import { PiNotepadLight } from 'react-icons/pi'
 import { Fade } from 'react-awesome-reveal'
 import businessVideo from '../images/video.mp4';
 const Imagebanner = () => {
+    
     return (
         <div className='image-section'>
             <div className='image_banner_section'>
