@@ -16,7 +16,7 @@
 
 .testimonial-section .inner_content_section {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
 .testimonial-section .swiper .swiper-slide {
@@ -63,7 +63,7 @@
 
 .testimonial-section .swiper .swiper-button-next {
     right: 300px;
-    padding: 30px 0px 30px 20px;
+    padding: 30px 0px 30px 25px;
     width: 140px;
     border-radius: 40px;
     background: #F3F3F3;
@@ -72,7 +72,7 @@
 .testimonial-section .swiper .swiper-button-prev {
     left: 300px;
     flex-direction: row-reverse;
-    padding: 30px 20px 30px 0;
+    padding: 30px 25px 30px 0;
     width: 140px;
     border-radius: 40px;
     background: #F3F3F3;

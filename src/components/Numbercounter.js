@@ -2,14 +2,13 @@ import React, { useEffect, useState, useRef } from 'react';
 import Numberimage from '../component-images/Numberimage';
 import '../component-css/number.css'
 const Numbercounter = () => {
-    const CountUpAnimation = ({ initialValue, targetValue, counterAnimation }) => {
+    const CountUpAnimation = ({ initialValue, targetValue }) => {
         const [count, setCount] = useState(initialValue);
         const duration = 4000; // 4 seconds
 
         useEffect(() => {
-            if (!counterAnimation) return
             let startValue = initialValue;
-            const interval = Math.floor(
+            const timingBreak = Math.floor(
                 duration / (targetValue - initialValue));
 
             const counter = setInterval(() => {
@@ -18,7 +17,7 @@ const Numbercounter = () => {
                 if (startValue >= targetValue) {
                     clearInterval(counter);
                 }
-            }, interval);
+            }, timingBreak);
 
             return () => {
                 clearInterval(counter);
@@ -35,7 +34,7 @@ const Numbercounter = () => {
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
                 setCounterAnimation(true);
-                observer.unobserve(counterRef.current); // Stop observing after it has animated
+                observer.unobserve(counterRef.current);
             }
         });
 

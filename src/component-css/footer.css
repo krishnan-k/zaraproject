@@ -95,6 +95,7 @@ footer .footer-section {
 .footer-bottom-content p a {
   color: #4eaf4e;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .news-letter-section {
@@ -115,6 +116,7 @@ footer .footer-section {
   width: 40%;
   display: flex;
   position: relative;
+  gap: 10px;
 }
 
 .news-letter-section .btn-section input[type="text"] {
@@ -123,6 +125,18 @@ footer .footer-section {
   border-radius: 40px;
   text-transform: capitalize;
   width: 100%;
+  transition: all 0.3s linear;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.news-letter-section .btn-section input[type="text"]:focus {
+  outline: -webkit-focus-ring-color auto 0;
+  border: 1px solid #4eaf4e;
+}
+
+.news-letter-section .btn-section input[type="text"]::placeholder {
+  color: #00000085;
 }
 
 .news-letter-section button.submit-btn {
@@ -138,7 +152,7 @@ footer .footer-section {
   font-size: 16px;
   font-weight: 600;
   position: absolute;
-  right: 5px;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
@@ -152,22 +166,17 @@ footer .footer-section {
   .news-letter-section {
     padding: 35px 20px;
   }
-
-  .news-letter-section button.submit-btn {
-    position: relative;
-    right: unset;
-    top: unset;
-    transform: unset;
-  }
 }
 
 @media screen and (max-width: 989px) {
   footer .footer-section {
     padding: 2rem 1rem;
   }
+
   .footer-bottom-content p {
     padding: 15px;
   }
+
   .footer-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -192,16 +201,22 @@ footer .footer-section {
   .footer-category ul li:not(:last-child) {
     padding-bottom: 14px;
   }
+  .news-letter-section .newsletter h3{
+    font-size: 26px;
+  }
   .news-letter-section .btn-section {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .footer-category h4 {
     font-size: 18px;
   }
+
   .footer-category img {
     max-width: 100px;
   }
+
   .footer-category .social-icons {
     margin-top: 15px;
   }
@@ -212,6 +227,13 @@ footer .footer-section {
 }
 
 @media screen and (max-width: 480px) {
+  .news-letter-section button.submit-btn {
+    position: relative;
+    right: unset;
+    top: unset;
+    transform: unset;
+  }
+
   .footer-category .title svg {
     display: block;
   }

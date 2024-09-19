@@ -4,19 +4,20 @@ import { CiClock2, CiLocationOn } from 'react-icons/ci'
 import { IoCallOutline } from 'react-icons/io5'
 import { MdEmail } from 'react-icons/md'
 import { Fade } from 'react-awesome-reveal'
+import { Link } from 'react-router-dom'
 const Contact = () => {
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
         phone: '',
         company: '',
-        message:''
+        message: ''
     });
     const [error, setError] = useState({});
     const formValidation = (name, value) => {
         let newErrors = '';
         if (name === 'fullName') {
-            if (!value) newErrors = 'user name is required';
+            if (!value) newErrors = 'User name is required';
         } else if (name === 'email') {
             if (!value) newErrors = 'Email is required'
             else if (!/\S+@\S+\.\S+/.test(value)) {
@@ -26,11 +27,11 @@ const Contact = () => {
         else if (name === 'phone') {
             if (!value) newErrors = 'Phone number is required';
         }
-        else if(name === 'company'){
-            if(!value) newErrors = 'Company name is required'
+        else if (name === 'company') {
+            if (!value) newErrors = 'Company name is required'
         }
-        else if(name === 'message'){
-            if(!value) newErrors = 'Message can not blank'
+        else if (name === 'message') {
+            if (!value) newErrors = 'Message cannot be blank'
         }
         return newErrors;
     }
@@ -56,11 +57,19 @@ const Contact = () => {
             email: formValidation('email', formData.email),
             phone: formValidation('phone', formData.phone),
             company: formValidation('company', formData.company),
-            message: formValidation('message',formData.message)
+            message: formValidation('message', formData.message)
         }
         if (Object.values(errorMessage).every(error => !error)) {
             console.log('Form data is valid', formData);
             alert('Form is valid')
+            setFormData({
+                fullName: '',
+                email: '',
+                phone: '',
+                company: '',
+                message: ''
+            })
+            setError({});
         }
         else {
             setError(errorMessage);
@@ -91,7 +100,7 @@ const Contact = () => {
                                     </div>
                                     <div className='details'>
                                         <p>Call Today</p>
-                                        <h6>+1 800 100 900</h6>
+                                        <h6><Link to="tel:+1 800 100 900">+1 800 100 900</Link></h6>
                                     </div>
                                 </div>
                                 <div className='time'>
@@ -165,7 +174,7 @@ const Contact = () => {
 
                                         <div className="company">
                                             <label className="company_name">
-                                                Company(optional)
+                                                Company <span className='mandatory'>*</span>
                                             </label>
                                             <input
                                                 className="company details"
@@ -181,7 +190,7 @@ const Contact = () => {
                                 </div>
                                 <div className='text-message'>
                                     <label className="company_name">
-                                        message
+                                        message <span className='mandatory'>*</span>
                                     </label>
                                     <textarea name='message' value={formData.message} onChange={handleChange}></textarea>
                                     {error.message && (<p className='error'>{error.message}</p>)}

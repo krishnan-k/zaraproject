@@ -42,10 +42,9 @@
 
 .image-grid-section .inner-content {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 10px;
-  flex-wrap: wrap;
 }
 
 .image-grid-section .left-content {
@@ -86,7 +85,7 @@
 }
 
 .img-box {
-  margin-top: 30px;
+  margin-top: 75px;
 }
 
 .image-box .inner-content .title {
@@ -94,6 +93,7 @@
   font-weight: 600;
   transition: all 0.3s linear;
   color: white;
+  word-break: break-word;
 }
 
 .img-section {
@@ -118,6 +118,8 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s linear;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .image-box-content .image-box .img-section:after {
@@ -280,6 +282,7 @@ button.gallery-btn::after {
   z-index: -1;
   opacity: 0.75;
 }
+
 .gallery-popup-section .left-content .des h4 {
   margin-top: 0;
   margin-bottom: 0;
@@ -287,10 +290,14 @@ button.gallery-btn::after {
   font-weight: 400;
   font-size: 16px;
 }
+
 .gallery-popup-section .left-content .title h2 {
   margin: 10px 0;
   font-weight: 600;
   font-size: 25px;
+}
+.gallery-popup-section .left-content img {
+  border-radius: 20px;
 }
 @keyframes scaleout {
   0% {
@@ -307,19 +314,39 @@ button.gallery-btn::after {
   .image-box-content {
     width: 95%;
   }
-  .image-grid-section .container>.inner-content{
+
+  .image-grid-section .container>.inner-content {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-  .image-grid-section .left-content, .image-grid-section .inner-content .left-content h2{
+
+  .image-grid-section .left-content, .image-grid-section .inner-content .left-content h2 {
     text-align: center;
   }
-  .image-box-content .image-box .img-section+.inner-content{
+
+  .image-box-content .image-box .img-section+.inner-content {
     left: 15px;
     bottom: 15px;
   }
 }
 
 @media screen and (max-width: 989px) {
+
+  button.gallery-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  button.gallery-btn::after {
+    width: 45px;
+    height: 45px;
+  }
+
+  button.gallery-btn svg {
+    font-size: 14px;
+  }
+
   .image-box .inner-content .title {
     font-size: 22px;
   }
@@ -331,6 +358,8 @@ button.gallery-btn::after {
 
   .image-grid-section .container>.inner-content {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .image-box-content {
@@ -357,8 +386,13 @@ button.gallery-btn::after {
   }
 
   .image-box .inner-content .title {
-    font-size: 20px;
+    font-size: 16px;
   }
+
+  .image-box .inner-content .des {
+    font-size: 14px;
+  }
+
 }
 
 @media screen and (max-width: 576px) {

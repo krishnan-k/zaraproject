@@ -15,19 +15,19 @@ const Numberimage = [
     {
         id: s2,
         image: s1,
-        value: 1542,
+        value: 300,
         des: "Expert Team"
     },
     {
         id: 14,
         image: s3,
-        value: 1542,
+        value: 850,
         des: "Activate Products"
     },
     {
         id: 15,
         image: s4,
-        value: 1542,
+        value: 650,
         des: "Awards Winning"
     },
 ]

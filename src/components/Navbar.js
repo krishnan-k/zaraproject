@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../component-css/navbar.css';
 import { IoCallOutline, IoClose } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
@@ -9,20 +9,30 @@ const Navbar = () => {
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
     };
+    const [sticky, setSticky] = useState(false);
+    const stickyNavigaion = () => {
+        setSticky(window.scrollY >= 150)
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', stickyNavigaion);
+        return () => {
+            window.removeEventListener('scroll', stickyNavigaion)
+        }
+    }, [])
     const [activeState, setActiveState] = useState(0)
     const handleMouseOver = (index) => {
         setActiveState(index)
     }
-    // const menuItems = [
-    //     { path: '/', label: 'home' },
-    //     { path: 'aboutus', label: 'about us' },
-    //     { path: 'services', label: 'services' },
-    //     { path: 'process', label: 'process' },
-    //     { path: 'feedback', label: 'feedback' },
-    //     { path: 'contact', label: 'contact' }
-    // ];
+    const menuItems = [
+        { href: '#home', label: 'home' },
+        { href: '#aboutus', label: 'about us' },
+        { href: '#service', label: 'services' },
+        { href: '#process', label: 'process' },
+        { href: '#blog', label: 'feedback' },
+        { href: '#contact', label: 'contact' }
+    ];
     return (
-        <div className={`navbar-section ${drawerOpen ? 'active' : ''}`}>
+        <div className={`navbar-section ${drawerOpen ? 'active' : ''} ${sticky ? 'navigaion-fixed' : ''}`}>
             <div className='container'>
                 <div className='logo'>
                     <Link to="/"> <img src={logo} alt='logo' /></Link>
@@ -36,12 +46,17 @@ const Navbar = () => {
                     </button>
                     <nav>
                         <ul>
-                            <li className='active'><Link to='/'>home</Link></li>
-                            <li><Link spy={true} smooth={true} duration={500}  to="aboutus">aboutus</Link></li>
-                            <li><Link to='ss'>services</Link></li>
-                            <li><Link to='aboutus'>work</Link> </li>
-                            <li><Link to='aboutus'>page</Link></li>
-                            <li><Link to='aboutus'>contact</Link></li>
+                            {menuItems.map((item, index) => (
+                                <li key={index} className={`${activeState === index ? 'active' : ''}`} onClick={() => handleMouseOver(index)}>
+                                    <a href={item.href}>{item.label}</a>
+                                </li>
+                            ))}
+                            {/* <li><a href='#home'>home</a></li>
+                            <li><a href="#aboutus">aboutus</a></li>
+                            <li><a href='#service'>services</a></li>
+                            <li><a href='#process'>gallery</a> </li>
+                            <li><a href='#blog'>blog</a></li>
+                            <li><a href='#contact'>contact</a></li> */}
                         </ul>
                     </nav>
                     <div className='contact_number'>

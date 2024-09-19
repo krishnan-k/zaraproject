@@ -20,7 +20,7 @@
 }
 
 p.error {
-  text-transform: capitalize;
+  text-transform: math-auto;
   font-size: 14px;
   color: red;
   margin: 5px 0;
@@ -30,7 +30,7 @@ p.error {
   font-size: clamp(1.375rem, 0.9849rem + 1.7834vw, 3.125rem);
   text-align: left;
   max-width: 600px;
-  margin: 0;
+  margin: 3px 0 0;
   color: black;
 }
 
@@ -62,7 +62,14 @@ p.error {
   font-size: 20px;
   font-weight: 600;
 }
-
+.contact-details h6 a{
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+.contact-details h6 a:hover{
+  color: #4eaf4e;
+}
 .contact-details {
   padding-top: 30px;
 }
@@ -217,13 +224,13 @@ span.mandatory {
     font-size: 16px;
   }
   .contact-section .contact-content .left-content h2 {
-    text-align: center;
+    text-align: left;
     margin: auto;
     padding-top: 10px;
   }
 
   .contact-section .contact-content .left-content {
-    text-align: center;
+    text-align: left;
   }
 
   .contact-content {

@@ -15,7 +15,7 @@ const Topbar = () => {
                 <div className='left_content'>
                     <div className='time'>
                         <CiClock2 />
-                        <p>Monday - Friday8AM - 9PM</p>
+                        <p>Monday - Friday 8AM - 9PM</p>
                     </div>
                     <div className='address'>
                         <CiLocationOn />

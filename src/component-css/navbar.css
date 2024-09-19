@@ -31,9 +31,14 @@
 
 .nav-content nav ul li.active {
   color: #4eaf4e;
-  font-weight: 700;
+  /* font-weight: 700; */
 }
-
+.nav-content nav ul li a{
+  transition: all 0.3s linear;
+}
+.nav-content nav ul li.active a{
+  color: #4eaf4e;
+}
 .nav-content nav ul li:before {
   content: "";
   position: absolute;
@@ -144,13 +149,30 @@ button.drawer-close {
   transition: all 0.3s linear;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   .nav-content .contact_number {
     display: none;
   }
 }
 
-@media screen and (max-width: 989px) {
+.navbar-section.navigaion-fixed {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  animation: slideDown 0.35s ease-out;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1199px) {
   .contact_number {
     display: none;
   }
@@ -177,18 +199,23 @@ button.drawer-close {
     z-index: 3;
     padding: 0;
   }
+
   .nav-content nav {
     width: 100%;
   }
+
   .nav-content nav ul li:before {
     left: 22px;
   }
+
   .nav-content nav ul li {
     border-bottom: 1px solid #252525;
   }
+
   .nav-content nav ul li {
     padding: 15px 50px;
   }
+
   .nav-content.open {
     transform: translateX(0);
   }
@@ -213,18 +240,22 @@ button.drawer-close {
     gap: 30px;
   }
 }
+
 @media screen and (max-width: 767px) {
   .navbar-section .logo img {
     max-width: 100px;
   }
-  .nav-content nav ul li a{
+
+  .nav-content nav ul li a {
     font-size: 14px;
   }
 }
+
 @media screen and (max-width: 576px) {
   .navbar-section .container {
     justify-content: center;
   }
+
   .navbar-section .container {
     padding: 10px;
   }

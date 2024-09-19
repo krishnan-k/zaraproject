@@ -193,7 +193,7 @@
 .blog-content-section .swiper .swiper-button-prev {
     left: 500px;
     flex-direction: row-reverse;
-    padding: 30px 20px 30px 0;
+    padding: 30px 25px 30px 0;
     width: 140px;
     border-radius: 40px;
     background: #dfdfdf;
@@ -203,7 +203,7 @@
 
 .blog-content-section .swiper .swiper-button-next {
     right: 500px;
-    padding: 30px 0px 30px 20px;
+    padding: 30px 0px 30px 25px;
     width: 140px;
     border-radius: 40px;
     background: #dfdfdf;
@@ -302,10 +302,15 @@
     .blog-content-section .blog-sec {
         grid-template-columns: repeat(1, 1fr);
     }
+    .blog-content-section .blog-post .blog-inner-content .title{
+        padding-bottom: 5px;
+    }
     .blog-sec .swiper {
         padding-bottom: 95px;
     }
-    .blog-content-section .blog-post .blog-inner-content .des{
+    .blog-content-section .blog-post .blog-inner-content .des,
+    .blog-content-section .blog-post .blog-date,
+    .blog-content-section .blog-post .author_name{
         font-size: 14px;
     }
 }
