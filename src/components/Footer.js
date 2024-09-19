@@ -27,8 +27,10 @@ const Footer = () => {
                         <h3>subscribe</h3>
                     </div>
                     <div className='btn-section'>
-                        <input type='text' placeholder='enter your email address' />
-                        <button type='submit' className='submit-btn shine-effect'>subscribe</button>
+                        <form>
+                            <input type='text' placeholder='enter your email address' required />
+                            <button type="submit" className='submit-btn shine-effect'>subscribe</button>
+                        </form>
                     </div>
                 </div>
             </div>
