@@ -30,17 +30,29 @@
   border-right: 1px dashed #989898;
   padding-right: 60px;
 }
+
 .number-img .img-content span.num {
   width: 150px;
   display: block;
 }
+
 @media screen and (max-width: 989px) {
   .number-counter-content .number-img:not(:last-child) {
     padding-right: 40px;
   }
 
   .number-counter-content {
-    padding: 30px 20px 0;
+    padding: 20px 20px 0;
+  }
+  .number-counter-content .number-img:nth-child(even) {
+    border: none;
+  }
+  .number-counter-content .number-img {
+    width: 50%;
+    justify-content: center;
+  }
+  .number-counter-content {
+
   }
 }
 
@@ -48,20 +60,33 @@
   .number-counter-content .number-img:not(:last-child) {
     border: none;
   }
-  .number-counter-content .img-content .description{
+
+  .number-counter-content .img-content .description {
     font-size: 14px;
   }
 }
 
 @media screen and (max-width: 576px) {
+  .number-counter-content .number-img{
+    justify-content: flex-start;
+  }
   .number-counter-content {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 10px 50px 0;
   }
+
   .number-counter-content {
-    padding: 50px 50px 0;
+    padding: 40px 15px 0;
   }
 }
-
+@media screen and (max-width: 480px) {
+  .number-counter-content .number-img{
+   width: 100%;
+   justify-content: center;
+  }
+  .number-counter-content .number-img:not(:last-child){
+    padding: 0;
+  }
+}
