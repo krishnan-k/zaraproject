@@ -45,7 +45,7 @@ const Blog = () => {
                 320: {
                   slidesPerView: 1,
                 },
-                768: {
+                577: {
                   slidesPerView: 2,
                 },
                 1200: {
