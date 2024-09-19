@@ -4,6 +4,7 @@ import Topbar from './components/Topbar';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from './pages/Homepage';
 import Navbar from './components/Navbar';
+import Scrolltop from './components/Scrolltop';
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
           </Routes>
+          <Scrolltop/>
         </div>
       </Router>
     </>

@@ -39,18 +39,44 @@ body {
   -webkit-animation: shine 0.85s;
   animation: shine 0.85s;
 }
+
 .image.shine-effect:after {
   z-index: 1;
   left: -70%;
 }
+
 .animation-class {
   overflow: hidden;
 }
+
 @keyframes shine {
   100% {
     left: 125%;
   }
 }
+
 html {
   scroll-behavior: smooth;
+}
+
+button.scroll-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  background: #4eaf4e;
+  color: white;
+  border: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed;
+  margin: 0;
+  top: unset;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  padding: 0;
 }
