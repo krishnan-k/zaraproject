@@ -141,7 +141,7 @@
     margin: auto;
   }
   .image-content-section .inner-content-sec .left-content .socials {
-    row-gap: 15px;
+    row-gap: 10px;
     justify-content: center;
   }
 
@@ -154,7 +154,7 @@
     display: none;
   }
   .left-content .happy-customer {
-    margin: 0 10px;
+    margin: 0;
   }
   .left-content .happy-customer:not(:last-child) {
     margin-right: 20px;
@@ -169,11 +169,11 @@
 }
 @media screen and (max-width: 480px) {
   .left-content .happy-customer {
-    margin: 0 8px;
+    margin: 0 5px;
   }
   .image-content-section .inner-content-sec .left-content .socials {
     flex-wrap: wrap;
-    padding: 15px 0;
+    padding: 10px 0;
   }
   .happy-customer .business-service h5 {
     font-size: 20px;
@@ -182,6 +182,6 @@
     font-size: 14px;
   }
   .left-content .happy-customer:not(:last-child) {
-    margin-right: 0;
+    margin-right: 5px;
   }
 }
