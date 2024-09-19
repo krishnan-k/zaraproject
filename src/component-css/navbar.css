@@ -33,12 +33,15 @@
   color: #4eaf4e;
   /* font-weight: 700; */
 }
-.nav-content nav ul li a{
+
+.nav-content nav ul li a {
   transition: all 0.3s linear;
 }
-.nav-content nav ul li.active a{
+
+.nav-content nav ul li.active a {
   color: #4eaf4e;
 }
+
 .nav-content nav ul li:before {
   content: "";
   position: absolute;
@@ -159,7 +162,13 @@ button.drawer-close {
   position: sticky;
   top: 0;
   z-index: 2;
-  animation: slideDown 0.35s ease-out;
+
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar-section.navigaion-fixed {
+    animation: slideDown 0.35s ease-out;
+  }
 }
 
 @keyframes slideDown {

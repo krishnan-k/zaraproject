@@ -63,9 +63,9 @@
 }
 
 .image_banner_section .inner-content p {
-  padding-top: 16px;
+  padding-top: 20px;
   max-width: 500px;
-  padding-bottom: 40px;
+  padding-bottom: 25px;
 }
 
 .inner-content .buttons button {
@@ -201,7 +201,7 @@ span.book_appoinment {
 .image-section .swiper .swiper-button-prev {
   left: 0;
   flex-direction: row-reverse;
-  padding: 30px 25px 30px 0;
+  padding: 30px 30px 30px 0;
   width: 140px;
   border-radius: 40px;
   background: #dfdfdf;
@@ -214,7 +214,7 @@ span.book_appoinment {
 
 .image-section .swiper .swiper-button-next {
   right: 0;
-  padding: 30px 0px 30px 25px;
+  padding: 30px 0px 30px 30px;
   width: 140px;
   border-radius: 40px;
   background: #dfdfdf;
