@@ -46,7 +46,7 @@ const Imagegrid = () => {
                             </div>
                         </div>
                         <div className='right-content'>
-                            <button type='button' className='service shine-effect'>more gallery</button>
+                            <button type='button' className='service shine-effect'><a href='#home'>more gallery</a></button>
                         </div>
                     </div>
 

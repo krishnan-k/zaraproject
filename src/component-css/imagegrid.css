@@ -63,7 +63,10 @@
   text-transform: capitalize;
   font-size: 18px;
 }
-
+.image-grid-section .inner-content .right-content button.service a{
+  color: white;
+  text-decoration: none;
+}
 .image-box-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -76,6 +79,7 @@
   margin-top: 0;
   z-index: 1;
   position: relative;
+  box-shadow: rgba(149, 157, 165, 0.09) 0px 8px 24px;
 }
 
 .image-box-content .img-section img {

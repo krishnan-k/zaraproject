@@ -39,7 +39,7 @@ const Imagebanner = () => {
                                         Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.
                                     </p>
                                     <div className='buttons'>
-                                        <button type='button' className='service shine-effect'>our service</button>
+                                        <button type='button' className='service shine-effect'><a href='#service'>our service</a></button>
                                         <button type='button' className='book_date shine-effect'>
                                             <span className='book_appoinment'>
                                                 <span className='calender'>
@@ -72,7 +72,7 @@ const Imagebanner = () => {
                                         Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.
                                     </p>
                                     <div className='buttons'>
-                                        <button type='button' className='service shine-effect'>our service</button>
+                                        <button type='button' className='service shine-effect'><a href='#service'>our service</a></button>
                                         <button type='button' className='book_date shine-effect'>
                                             <span className='book_appoinment'>
                                                 <span className='calender'>

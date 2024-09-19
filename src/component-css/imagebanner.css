@@ -84,7 +84,10 @@
   color: white;
   margin-right: 0;
 }
-
+.inner-content .buttons button.service a{
+  text-decoration: none;
+  color: white;
+}
 .book_appoinment span.calender {
   width: 38px;
   height: 38px;

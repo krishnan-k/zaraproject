@@ -29,7 +29,7 @@ const Blog = () => {
               </div>
             </div>
             <div className='right-content'>
-              <button type='button' className='service shine-effect'>more news</button>
+              <button type='button' className='service shine-effect'><a href='#home'>more news</a></button>
             </div>
           </div>
 
