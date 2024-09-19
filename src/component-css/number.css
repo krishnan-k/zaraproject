@@ -50,7 +50,7 @@
 }
 @media screen and (max-width: 989px) {
   .number-counter-content .number-img:not(:last-child) {
-    padding-right: 40px;
+    padding-right: 0;
   }
 
   .number-counter-content {

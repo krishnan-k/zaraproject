@@ -225,7 +225,7 @@ span.mandatory {
   }
   .contact-section .contact-content .left-content h2 {
     text-align: left;
-    margin: auto;
+    margin: 0;
     padding-top: 10px;
   }
 
