@@ -259,19 +259,19 @@ span.book_appoinment {
 
 @media screen and (max-width: 1340px) {
   .image-section .swiper-horizontal>.swiper-pagination-bullets {
-    bottom: 30px;
+    bottom: 40px;
   }
 
   .image-section .swiper .swiper-button-next {
     right: 15px;
     top: auto;
-    bottom: 15px;
+    bottom: 0;
   }
 
   .image-section .swiper .swiper-button-prev {
     left: 15px;
     top: auto;
-    bottom: 15px;
+    bottom: 0;
   }
 
   .image-section .swiper .swiper-button-prev::before,
@@ -381,13 +381,13 @@ span.book_appoinment {
   .image-section .swiper .swiper-button-next {
     right: 15px;
     top: auto;
-    bottom: 15px;
+    bottom: 0;
     width: 35px;
     height: 35px;
   }
 
   .image-section .swiper-horizontal>.swiper-pagination-bullets {
-    bottom: 20px;
+    bottom: 22px;
   }
 
   .image-section .swiper .swiper-button-next:after,
@@ -399,7 +399,7 @@ span.book_appoinment {
   .image-section .swiper .swiper-button-prev {
     left: 15px;
     top: auto;
-    bottom: 15px;
+    bottom: 0;
     width: 35px;
     height: 35px;
   }
