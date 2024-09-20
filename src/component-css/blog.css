@@ -236,6 +236,15 @@
 }
 
 @media screen and (max-width: 1340px) {
+    .blog-content-section .swiper-horizontal>.swiper-pagination-bullets{
+        bottom: 15px;
+    }
+    .blog-content-section {
+        padding: 6rem 1.8rem 3rem;
+    }
+    .blog-sec .swiper {
+        padding-bottom: 110px;
+    }
     .blog-content-section .swiper .swiper-button-next {
         right: 0;
         top: auto;
@@ -290,7 +299,7 @@
 
 @media screen and (max-width: 989px) {
     .blog-content-section {
-        padding: 3rem 1rem;
+        padding: 3rem 1rem 1.5rem;
     }
 
     .blog-content-section .swiper-horizontal>.swiper-pagination-bullets {
