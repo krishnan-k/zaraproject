@@ -2,12 +2,12 @@ import React, { useEffect, useState, useRef } from 'react';
 import { IoIosHappy } from 'react-icons/io';
 import { IoStarSharp } from 'react-icons/io5';
 import '../component-css/imagecontent.css'
-import rightImage from '../images/image.png'
+import rightImage from '../images/Image.png'
 import { Fade } from 'react-awesome-reveal';
 const Imagecontent = () => {
     const CountUpAnimation = ({ initialValue, targetValue }) => {
         const [count, setCount] = useState(initialValue);
-        const duration = 4000; // 4 seconds
+        const duration = 3000; // 4 seconds
 
         useEffect(() => {
             let startValue = initialValue;
@@ -38,6 +38,12 @@ const Imagecontent = () => {
             if (entry.isIntersecting) {
                 setCounterAnimation(true);
                 observer.unobserve(counterRef.current);
+                const entrySection = document.querySelector('.image-content-section');
+                entrySection.classList.add('active');
+                setInterval(() => {
+                    const contentSection = document.querySelector('.content-section-img');
+                    contentSection.classList.add('active');
+                }, 3000)
             }
         });
 
@@ -84,7 +90,26 @@ const Imagecontent = () => {
                             </div>
                         </div>
                         <div className='right-content'>
-                            <img src={rightImage} alt='rightimage' />
+                            <div className={`right-img-section ${counterAnimation ? 'active' : ''}`}>
+                                <img src={rightImage} alt='rightimage' />
+                                <div className='img-inner-content'>
+                                    <div className='content-section-img'>
+                                        <div>
+                                            <h4 className='counter-content'>
+                                                <div class="counter-content-outer">
+                                                    <div class="counter-content-inner"></div>
+                                                </div>
+                                                <CountUpAnimation initialValue={0} targetValue={50} counterAnimation={counterAnimation} />
+                                                <svg className='circle-svg' viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="400" cy="400" fill="none"
+                                                        r="200" stroke-width="20" stroke="#4eaf4e" />
+                                                </svg>
+                                            </h4>
+                                            <p>market <br></br> experiences</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
