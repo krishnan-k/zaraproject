@@ -311,9 +311,9 @@ span.dummy {
 }
 
 @media screen and (max-width: 767px) {
-  /* .image-content-section .inner-content-sec .right-content::before {
+  .image-content-section .inner-content-sec .right-content::before {
     display: none;
-  } */
+  }
 
   .image-content-section .inner-content-sec .right-img-section .img-inner-content {
     margin: -100px 0 0 40px;
