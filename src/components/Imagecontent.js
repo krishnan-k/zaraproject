@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { IoIosHappy } from 'react-icons/io';
 import { IoStarSharp } from 'react-icons/io5';
 import '../component-css/imagecontent.css'
-import rightImage from '../images/Image.png'
+import rightImage from '../images/rightimg.png'
 import { Fade } from 'react-awesome-reveal';
 const Imagecontent = () => {
     const CountUpAnimation = ({ initialValue, targetValue }) => {
