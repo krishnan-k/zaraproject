@@ -6,10 +6,11 @@ import logo from '../images/Logo.svg';
 import { BiMenu } from 'react-icons/bi';
 const Navbar = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const [sticky, setSticky] = useState(false);
+    const [activeState, setActiveState] = useState(0)
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
     };
-    const [sticky, setSticky] = useState(false);
     const stickyNavigaion = () => {
         setSticky(window.scrollY >= 150)
     }
@@ -19,10 +20,12 @@ const Navbar = () => {
             window.removeEventListener('scroll', stickyNavigaion)
         }
     }, [])
-    const [activeState, setActiveState] = useState(0)
+
     const handleMouseOver = (index) => {
         setActiveState(index)
+        setDrawerOpen(!drawerOpen)
     }
+
     const menuItems = [
         { href: '#home', label: 'home' },
         { href: '#aboutus', label: 'about us' },
@@ -51,12 +54,6 @@ const Navbar = () => {
                                     <a href={item.href}>{item.label}</a>
                                 </li>
                             ))}
-                            {/* <li><a href='#home'>home</a></li>
-                            <li><a href="#aboutus">aboutus</a></li>
-                            <li><a href='#service'>services</a></li>
-                            <li><a href='#process'>gallery</a> </li>
-                            <li><a href='#blog'>blog</a></li>
-                            <li><a href='#contact'>contact</a></li> */}
                         </ul>
                     </nav>
                     <div className='contact_number'>

@@ -96,13 +96,13 @@ const Imagecontent = () => {
                                     <div className='content-section-img'>
                                         <div>
                                             <h4 className='counter-content'>
-                                                <div class="counter-content-outer">
-                                                    <div class="counter-content-inner"></div>
+                                                <div className="counter-content-outer">
+                                                    <div className="counter-content-inner"></div>
                                                 </div>
                                                 <CountUpAnimation initialValue={0} targetValue={50} counterAnimation={counterAnimation} />
                                                 <svg className='circle-svg' viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
                                                     <circle cx="400" cy="400" fill="none"
-                                                        r="200" stroke-width="20" stroke="#4eaf4e" />
+                                                        r="200" strokeWidth="20" stroke="#4eaf4e" />
                                                 </svg>
                                             </h4>
                                             <p>market <br></br> experiences</p>

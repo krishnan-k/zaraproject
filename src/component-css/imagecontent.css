@@ -257,7 +257,7 @@ span.dummy {
   top: 7px;
   bottom: auto;
   left: -8px;
-  z-index: 2;
+  z-index: 1;
   content: '';
   visibility: hidden;
 }

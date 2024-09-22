@@ -141,16 +141,7 @@ button.drawer-close {
   z-index: 2;
 }
 
-.navbar-section.active::after {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  inset: 0;
-  z-index: 2;
-  transition: all 0.3s linear;
-}
+
 
 @media screen and (min-width: 1200px) {
   .nav-content .contact_number {
@@ -191,6 +182,17 @@ button.drawer-close {
     padding: 0 20px;
   }
 
+  .navbar-section.active::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    z-index: 2;
+    transition: all 0.3s linear;
+  }
+
   .nav-content {
     position: fixed;
     top: 0;
@@ -222,7 +224,12 @@ button.drawer-close {
   }
 
   .nav-content nav ul li {
-    padding: 15px 50px;
+    padding: 18px 50px;
+    display: block;
+  }
+
+  .nav-content nav ul li a {
+    display: block;
   }
 
   .nav-content.open {
