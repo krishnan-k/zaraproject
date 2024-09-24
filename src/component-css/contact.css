@@ -141,7 +141,9 @@ p.error {
 }
 
 .contact-section .right-content input[type="text"],
-.contact-section .right-content input[type="number"] {
+.contact-section .right-content input[type="number"],
+.contact-section .right-content input[type="tel"],
+.contact-section .right-content input[type="email"] {
   border: none;
   padding: 22px 23px;
   border-radius: 40px;
@@ -152,11 +154,15 @@ p.error {
   box-shadow: none;
 }
 .contact-section input[type='text']::placeholder,
-.contact-section input[type='number']::placeholder {
+.contact-section input[type='number']::placeholder,
+.contact-section input[type='tel']::placeholder,
+.contact-section input[type='email']::placeholder {
   color: #00000085;
 }
 .contact-section .right-content input[type="text"]:focus,
 .contact-section .right-content input[type="number"]:focus,
+.contact-section .right-content input[type="tel"]:focus,
+.contact-section .right-content input[type="email"]:focus,
 .right-content textarea:focus {
   border: 1px solid #4eaf4e;
 }
@@ -202,7 +208,33 @@ p.error {
 span.mandatory {
   color: red;
 }
-
+.success_message {
+  background: #DBF8E8;
+  padding: 16px 20px;
+  border: 2px solid #C2F2D7;
+  border-radius: 5px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.success_message p {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #058424;
+}
+.success_message .close-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.success_message .close-icon svg {
+  color: #058424;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
 @media screen and (min-width: 990px) {
   .contact-section .left-content {
     position: sticky;

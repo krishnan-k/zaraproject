@@ -8,6 +8,7 @@ import Blog from '../components/Blog'
 import Testimonials from '../components/Testimonials'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import ContactAPI from '../components/ContactAPI'
 
 
 
@@ -21,7 +22,8 @@ const Homepage = () => {
       <Numbercounter />
       <Blog />
       <Testimonials />
-      <Contact />
+      {/* <Contact /> */}
+      <ContactAPI/>
       <Footer />
     </>
   )

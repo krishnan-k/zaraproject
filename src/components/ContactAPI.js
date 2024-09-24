@@ -1,11 +1,12 @@
 import React, { useRef, useState } from 'react';
 import '../component-css/contact.css';
 import { CiClock2, CiLocationOn } from 'react-icons/ci';
-import { IoCallOutline } from 'react-icons/io5';
+import { IoCallOutline, IoCloseCircleOutline } from 'react-icons/io5';
 import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-router-dom';
+//import axios from 'axios';
 import emailjs from '@emailjs/browser';
-const Contact = () => {
+const ContactAPI = () => {
     const form = useRef();
     const [formData, setFormData] = useState({
         fullName: '',
@@ -15,44 +16,50 @@ const Contact = () => {
         message: ''
     });
     const [error, setError] = useState({});
-
+    const [successMessage, setSuccessMessage] = useState(false);
     const formValidation = (name, value) => {
-        let newErrors = '';
-        if (name === 'fullName' && !value) newErrors = 'User name is required';
-        else if (name === 'email') {
-            if (!value) newErrors = 'Email is required';
-            else if (!/\S+@\S+\.\S+/.test(value)) newErrors = 'Email is invalid';
-        } else if (name === 'phone' && !value) newErrors = 'Phone number is required';
-        else if (name === 'company' && !value) newErrors = 'Company name is required';
-        else if (name === 'message' && !value) newErrors = 'Message cannot be blank';
-        return newErrors;
+        if (name === 'fullName' && !value) return 'User name is required';
+        if (name === 'email') {
+            if (!value) return 'Email is required';
+            if (!/\S+@\S+\.\S+/.test(value)) return 'Email is invalid';
+        }
+        if (name === 'phone' && !value) return 'Phone number is required';
+        if (name === 'company' && !value) return 'Company name is required';
+        if (name === 'message' && !value) return 'Message cannot be blank';
+        return '';
     };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
+        setFormData(prevData => ({
+            ...prevData,
             [name]: value
-        });
+        }));
         setError(prevError => ({
             ...prevError,
             [name]: formValidation(name, value)
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         //Your Emailjs service ID, template ID, and public key
-        const serviceId = 'service_s4miac5';
-        const templateId = 'template_1tka4we';
-        const publicKey = 'lE6YScQKSLrvPkXXv';
+        const serviceId = 'service_zrhq7wd';
+        const templateId = 'template_le2qufy';
+        const publicKey = 'fp7mSoTgliBfeKJZv';
 
-        const templateParams = {
-            fullName: formData.fullName,
-            from_email: formData.email,
-            message: formData.message
-        }
+        // const data = {
+        //     service_id: serviceId,
+        //     template_id: templateId,
+        //     user_id: publicKey,
+        //     template_params: {
+        //         fullName: formData.fullName,
+        //         fromEmail: formData.email,
+        //         to_name: 'Web Wizard',
+        //         message: formData.message,
+        //     }
+        // };
         const errorMessage = {
             fullName: formValidation('fullName', formData.fullName),
             email: formValidation('email', formData.email),
@@ -62,9 +69,15 @@ const Contact = () => {
         };
 
         if (Object.values(errorMessage).every(error => !error)) {
-            emailjs.send(serviceId, templateId, publicKey, formData, templateParams)
+            emailjs.sendForm(serviceId, templateId, form.current, {
+                publicKey: publicKey
+            })
+                // const res = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data)
+                // console.log(res.data)
                 .then(() => {
-                    alert('Message sent successfully!');
+                    //alert('Message sent successfully!');
+                    setSuccessMessage(true);
+                    console.log(errorMessage);
                     setFormData({
                         fullName: '',
                         email: '',
@@ -75,7 +88,7 @@ const Contact = () => {
                     setError({});
                 })
                 .catch((err) => {
-                    console.error('Failed to send message:', err);
+                    console.error('Failed to send message:', err.res.data);
                     alert('Failed to send message, please try again later.');
                 });
         } else {
@@ -128,7 +141,16 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className='right-content'>
-                            <form onSubmit={handleSubmit} rel={form}>
+                            <form onSubmit={handleSubmit} ref={form}>
+                                {successMessage && (
+                                    <div className='success_message'>
+                                        <p>form submitted successfully, thankyou</p>
+                                        <div className='close-icon' onClick={() => setSuccessMessage(false)}>
+                                            <IoCloseCircleOutline />
+                                        </div>
+                                    </div>
+                                )}
+
                                 <div className='form-data'>
                                     <div className='data-1'>
                                         <div className="form_full_name">
@@ -210,4 +232,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default ContactAPI;
