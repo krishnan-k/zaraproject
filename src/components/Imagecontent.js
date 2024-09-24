@@ -40,7 +40,7 @@ const Imagecontent = () => {
                 observer.unobserve(counterRef.current);
                 const entrySection = document.querySelector('.image-content-section');
                 entrySection.classList.add('active');
-                setInterval(() => {
+                setTimeout(() => {
                     const contentSection = document.querySelector('.content-section-img');
                     contentSection.classList.add('active');
                 }, 3000)

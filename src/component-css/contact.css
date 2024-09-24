@@ -235,6 +235,9 @@ span.mandatory {
   height: 20px;
   cursor: pointer;
 }
+.success_message.hidden{
+  display: none;
+}
 @media screen and (min-width: 990px) {
   .contact-section .left-content {
     position: sticky;

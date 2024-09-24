@@ -76,6 +76,11 @@ const ContactAPI = () => {
                 // console.log(res.data)
                 .then(() => {
                     //alert('Message sent successfully!');
+
+                    setTimeout(() => {
+                        const successClass = document.querySelector('.success_message');
+                        successClass.classList.add('hidden');
+                    }, 10000);
                     setSuccessMessage(true);
                     console.log(errorMessage);
                     setFormData({
