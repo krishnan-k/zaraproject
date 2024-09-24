@@ -33,7 +33,7 @@ footer .footer-section {
   padding: 15px 0 0;
 }
 
-.footer-category ul li a {
+.footer-category ul li a,.footer-category ul li {
   font-size: 14px;
   color: white;
   text-transform: capitalize;
@@ -44,7 +44,10 @@ footer .footer-section {
 .footer-category ul li a:hover {
   color: #4eaf4e;
 }
-
+.footer-category ul li svg {
+  width: 25px;
+  height: 25px;
+}
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -54,7 +57,8 @@ footer .footer-section {
   padding-bottom: 18px;
 }
 
-.footer-category.contact-details-sec li a {
+.footer-category.contact-details-sec li a,
+.footer-category ul li {
   display: flex;
   align-items: center;
   gap: 10px;

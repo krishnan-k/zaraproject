@@ -95,9 +95,9 @@ const Footer = () => {
                         <div className="footer-category contact-details-sec">
                             <h4 className="title">Contact Us</h4>
                             <ul>
-                                <li><a className="link" href="">
+                                <li>
                                     <CiLocationOn /> Wisconsin Ave, Suite 700<br /> Chevy Chase, Maryland 20815
-                                </a></li>
+                                </li>
                                 <li><Link to='mailto:alma.lawson@example.com'><IoMailOutline />alma.lawson@example.com</Link></li>
                                 <li><Link to='tel: +1 800 854-36-80' className="link"><MdCall /> +1 800 854-36-80</Link></li>
                             </ul>
